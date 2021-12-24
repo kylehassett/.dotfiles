@@ -1,0 +1,3 @@
+[submodule "neovide/neovide"]
+	path = neovide/neovide
+	url = https://github.com/neovide/neovide.git

@@ -1,22 +1,13 @@
 #!/bin/sh
 
-echo "Starting bootstrap of kylehassett's dotfiles!"
+echo "Bootstraping kylehassett's dotfiles"
 
-echo "Checking if you have Homebrew installed...\n"
+/bin/bash ./homebrew/homebrew-install.sh
 
-if brew --version ; then
-    echo "You already have it, lovely.\n"
-else
-    echo "You don't have it, need to install it..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    echo "\n Done installing Homebrew, onto to the good stuff...\n"
-fi
+echo "Working with each program's dotfile now..."
 
-echo "Installing the contents of the brewfile..."
-
-brew bundle --file=./homebrew/Brewfile
-
-echo "Linking to each program's dotfile now..."
+/bin/bash ./vscode/vscode-install.sh
+/bin/bash ./neovim/neovim-install.sh
 
 ln -s ./neovim/.nvimrc ~/.nvimrc
 

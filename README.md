@@ -13,8 +13,8 @@ So this will contain setup related to all that stuff. I will soon have to purcha
 ## Usage
 Pretty self explanatory
 ```
-git clone https://github.com/kylehassett/dotfiles.git
-cd dotfiles
+git clone https://github.com/kylehassett/.dotfiles.git
+cd .dotfiles
 ./bootstrap.sh
 ```
 
