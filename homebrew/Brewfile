@@ -1,0 +1,56 @@
+# Setup taps
+
+tap 'homebrew/core'
+tap 'homebrew/bundle'
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
+tap 'caskroom/cask'
+
+
+# Formulae (In logical groups)
+
+## General
+brew 'fish'
+brew 'git'
+brew 'neovim'
+brew 'node'
+brew 'nvm'
+brew 'vim'
+brew 'yarn'
+
+## Neovide dependencies
+brew 'rust'
+brew 'rustup-init'
+brew 'cmake'
+
+
+# Casks
+
+cask 'adobe-creative-cloud'
+cask 'alfred'
+cask 'android-sdk'
+cask 'android-studio'
+cask 'authy'
+cask 'avast-security'
+cask 'bitwarden'
+cask 'docker'
+cask 'figma'
+cask 'fl-studio'
+cask 'flux'
+cask 'font-fira-code'
+cask 'google-chrome'
+cask 'google-drive'
+cask 'java'
+cask 'notion'
+cask 'obsidian'
+cask 'postman'
+cask 'react-native-debugger'
+cask 'scroll-reverser'
+cask 'slack'
+cask 'spectacle'
+cask 'spotify'
+cask 'svgcleaner'
+cask 'tunnelblick'
+cask 'visual-studio-code'
+cask 'zoom'
