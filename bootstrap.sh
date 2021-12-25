@@ -6,9 +6,8 @@ echo "Bootstraping kylehassett's dotfiles"
 
 echo "Working with each program's dotfile now..."
 
+/bin/bash ./git/git-install.sh
 /bin/bash ./vscode/vscode-install.sh
 /bin/bash ./neovim/neovim-install.sh
-
-ln -s ./neovim/.nvimrc ~/.nvimrc
 
 echo "Ok done, enjoy."

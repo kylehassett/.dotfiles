@@ -1,0 +1,72 @@
+{
+    "breadcrumbs.enabled": true,
+    "cSpell.language": "en",
+    "cSpell.userWords": [
+        "Kyphotic",
+        "Unmount",
+        "appspot",
+        "copyright",
+        "daos",
+        "emotionals",
+        "firebaseapp",
+        "fontawesome",
+        "formik",
+        "hassett",
+        "keyframes",
+        "logicals",
+        "musiqu",
+        "musique",
+        "ohpin",
+        "semibold",
+        "signup",
+        "sqlite",
+        "strftime",
+        "werkzeug"
+    ],
+    "editor.autoClosingBrackets": "never",
+    "editor.dragAndDrop": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "editor.minimap.enabled": false,
+    "editor.rulers": [100],
+    "editor.suggestSelection": "first",
+    "emmet.excludeLanguages": [],
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "fileheader.Author": "Kyle R Hassett",
+    "fileheader.LastModifiedBy": "Kyle R Hassett",
+    "fileheader.tpl": "/*\r\n * @Author: {author} \r\n * @Date: {createTime} \r\n * @Last Modified by:   {lastModifiedBy} \r\n * @Last Modified time: {updateTime} \r\n * @Copyright: 2018 Kyle R Hassett \r\n */\r\n",
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "files.exclude": {
+        "**/.git": false
+    },
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
+    "indentRainbow.colors": [
+        "rgba(255,255,64,0.05)",
+        "rgba(127,255,127,0.05)",
+        "rgba(255,127,255,0.05)",
+        "rgba(79,236,236,0.05)"
+    ],
+    "indentRainbow.errorColor": "rgba(128,32,32,0.05)",
+    "python.jediEnabled": false,
+    "python.languageServer": "Microsoft",
+    "terminal.integrated.rendererType": "dom",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "GitHub Dark Dimmed",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "[javascript]": {
+        "editor.tabSize": 4
+    },
+    "[python]": {
+        "editor.tabSize": 4
+    },
+}
