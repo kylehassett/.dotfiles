@@ -54,7 +54,7 @@
     ],
     "indentRainbow.errorColor": "rgba(128,32,32,0.05)",
     "python.jediEnabled": false,
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Default",
     "terminal.integrated.rendererType": "dom",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.activityBar.visible": false,
