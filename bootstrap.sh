@@ -9,6 +9,7 @@ echo "Working with each program's dotfile now..."
 /bin/bash ./git/git-install.sh
 /bin/bash ./vscode/vscode-install.sh
 /bin/bash ./neovim/neovim-install.sh
+/bin/bash ./neovide/neovide-install.sh
 /bin/bash ./fish/fish-install.sh
 
 echo "Ok done, steps that you have to do now..."

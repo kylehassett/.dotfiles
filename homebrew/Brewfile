@@ -16,6 +16,7 @@ brew 'git'
 brew 'neovim'
 brew 'node'
 brew 'nvm'
+brew 'python'
 brew 'vim'
 brew 'yarn'
 

@@ -10,3 +10,5 @@ echo "Installing vscode extensions..."
 while IFS= read -r line; do
     code --install-extension $line
 done < extensions.txt
+
+echo "Vscode's done."
