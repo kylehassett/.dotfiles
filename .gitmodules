@@ -1,3 +1,6 @@
 [submodule "neovide/neovide"]
 	path = neovide/neovide
 	url = https://github.com/neovide/neovide.git
+[submodule "fish/terminal-app"]
+	path = fish/terminal-app
+	url = https://github.com/dracula/terminal-app.git
