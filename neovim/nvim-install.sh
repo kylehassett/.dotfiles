@@ -4,15 +4,7 @@ echo "Starting neovim install"
 
 echo "Creating .config directories..."
 
-if [ ! -d "~/.config" ]
-then
-    mkdir ~/.config
-fi
-
-if [ ! -d "~/.config/nvim" ]
-then
-    mkdir ~/.config/nvim
-fi
+mkdir ~/.config/nvim
 
 echo "Downloading and setting up vim-plug"
 
