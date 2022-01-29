@@ -20,7 +20,7 @@ fi
 
 echo "Ok done, steps that you have to do now..."
 
-echo "- Terminal   - Set dracula as theme"
+echo "- iTerm2     - Set dracula as theme, JetBrains Mono as the font, and 13 as the font size (Optional: Repeat steps for Terminal app)."
 echo "- XCode      - Sign into app store, download, then install command line tools"
 echo "- Spectacle  - Change the keyboard shortcuts"
 echo "- Authy      - Sign in and setup"

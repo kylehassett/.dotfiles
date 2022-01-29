@@ -4,3 +4,6 @@
 [submodule "fish/terminal-app"]
 	path = fish/terminal-app
 	url = https://github.com/dracula/terminal-app.git
+[submodule "fish/iterm"]
+	path = fish/iterm
+	url = https://github.com/dracula/iterm.git

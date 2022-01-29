@@ -12,3 +12,4 @@ set PATH ~/.dotfiles/neovide/neovide/target/release/ $PATH
 ###
 alias cl "printf '\33c\e[3J'"
 alias ls "ls -Fla"
+alias nvid "nvid --frameless --multigrid"

@@ -1,8 +1,11 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+Plug 'airblade/vim-gitgutter'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'kevinoid/vim-jsonc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'wojciechkepka/vim-github-dark'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-sleuth'
 
 call plug#end()
