@@ -19,6 +19,10 @@ brew 'python'
 brew 'vim'
 brew 'yarn'
 
+## Neovim extension dependencies
+brew 'ripgrep'
+brew 'the_silver_searcher'
+
 ## Neovide dependencies
 brew 'rust'
 brew 'rustup-init'

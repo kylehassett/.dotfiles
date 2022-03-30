@@ -2,14 +2,13 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-###
-# Setup
-###
+# Path setup
 set PATH ~/.dotfiles/neovide/neovide/target/release/ $PATH
 
-###
-# Configuration
-###
+# Personalization
 alias cl "printf '\33c\e[3J'"
 alias ls "ls -Fla"
 alias nvid "nvid --frameless --multigrid"
+
+set EDITOR nvim
+set VISUAL nvim

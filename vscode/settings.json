@@ -69,4 +69,5 @@
     "[python]": {
         "editor.tabSize": 4
     },
+    "editor.cursorSmoothCaretAnimation": true,
 }
