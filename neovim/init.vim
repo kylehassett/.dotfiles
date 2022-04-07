@@ -38,21 +38,6 @@ syntax enable
 " ++ Personalization
 let mapleader = " "
 nmap <leader>/ :noh<CR>
-nnoremap <leader>fg :GFiles<CR>
-" --
-" ++ Buffer management
-nnoremap <leader>r :edit<CR>
-" --
-" ++ Tab management
-nnoremap <leader>tc :tabclose<CR>
-nnoremap <leader>te :$tabnew %<CR>
-nnoremap <leader>tn :tabnext<CR>
-nnoremap <leader>to :tabonly<CR>
-nnoremap <leader>tp :tabprevious<CR>
-" --
-" ++ Window management
-nnoremap <leader>wo <C-w>o
-nnoremap <leader>wq <C-w>q
 " --
 " ++ Window navigation
 function! WinMove(key)
@@ -137,13 +122,6 @@ nmap <leader>rn <Plug>(coc-rename)
 " --
 
 
-" FuzzyFinder
-" ++ Personalization
-nnoremap <leader>fc :Ag<Space>
-nnoremap <leader>ff :FZF<CR>
-" --
-
-
 " NERDTree
 " ++ General
 let NERDTreeShowHidden=1
@@ -173,4 +151,26 @@ nnoremap <leader>nc :NERDTreeClose<CR>
 " ++ General
 let g:indent_guides_enable_on_vim_startup = 1
 " --
+
+
+" +++ Keyboard shortcut system
+" f - Find
+nnoremap <leader>fc :Ag<CR> " find code
+nnoremap <leader>ff :FZF<CR> " find file
+nnoremap <leader>fg :GFiles<CR> " find git, FZF command doesn't show hidden files, GFiles will if it's in the git repo
+" h - Move left
+nnoremap <leader>ht :tabprevious<CR>
+" l - Move left
+nnoremap <leader>lt :tabnext<CR>
+" o - Only
+nnoremap <leader>ot :tabonly<CR>
+nnoremap <leader>ow <C-w>o " only window
+" n - New
+nnoremap <leader>nt :$tabnew %<CR>
+" r - reload
+nnoremap <leader>rt :edit<CR> " reload tab
+" q - Quit
+nnoremap <leader>qt :tabclose<CR>
+nnoremap <leader>qw <C-w>q " quit tab
+" ---
 
