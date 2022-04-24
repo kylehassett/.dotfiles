@@ -86,6 +86,9 @@ EOF
 
 
 " CoC
+" ++ Add :Format to format entire buffer
+command! -nargs=0 Format :call CocActionAsync('format')
+" --
 " ++ Highlight current symbol on hover
 autocmd CursorHold * silent call CocActionAsync('highlight')
 " --
@@ -105,20 +108,8 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 " --
-" ++ Personalization
+" ++ Cursor hold reveals identical symbols
 autocmd CursorHold * silent call CocActionAsync('highlight')
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>ac  <Plug>(coc-codeaction)
-nmap <leader>qf  <Plug>(coc-fix-current)
-nmap <leader>cl  <Plug>(coc-codelens-action)
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <leader>rn <Plug>(coc-rename)
 " --
 
 
@@ -127,8 +118,6 @@ nmap <leader>rn <Plug>(coc-rename)
 let NERDTreeShowHidden=1
 " --
 " ++ Personalization
-nnoremap <leader>no :NERDTree<CR>
-nnoremap <leader>nc :NERDTreeClose<CR>
 " --
 " ++ Start NERDTree when Vim starts with a directory argument.
 " autocmd StdinReadPre * let s:std_in=1
@@ -154,22 +143,45 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 
 " +++ Keyboard shortcut system
-" f - Find
-nnoremap <leader>fc :Ag<CR> " find code
-nnoremap <leader>ff :FZF<CR> " find file
-nnoremap <leader>fg :GFiles<CR> " find git, FZF command doesn't show hidden files, GFiles will if it's in the git repo
-" h - Move left
+" <leader><v>erb<noun> EX: new tab -> <leader>nt
+" Thinking in VIM, but for extensions, tabs, windows, etc.
+" Use capital letters for verb if there are multiple semantically useful words
+" for the short cuts.
+"
+" a - action
+nmap <leader>ac <Plug>(coc-codeaction)
+xmap <leader>as <Plug>(coc-codeaction-selected)
+nmap <leader>as <Plug>(coc-codeaction-selected)
+" c - close
+nnoremap <leader>Cn :NERDTreeClose<CR>
+" c - code
+nnoremap <leader>cd <Plug>(coc-definition)
+nnoremap <leader>ci <Plug>(coc-implementation)
+nnoremap <leader>cn <Plug>(coc-rename)
+nnoremap <leader>cr <Plug>(coc-references)
+nnoremap <leader>ct <Plug>(coc-type-definition)
+" f - find
+nnoremap <leader>fc :Ag<CR>
+nnoremap <leader>ff :FZF<CR>
+nnoremap <leader>fg :GFiles<CR>
+" f - format
+nnoremap <leader>F :Format<CR>
+xmap <leader>fs  <Plug>(coc-format-selected)
+nmap <leader>fs <Plug>(coc-format-selected)
+" h
 nnoremap <leader>ht :tabprevious<CR>
-" l - Move left
+" l
 nnoremap <leader>lt :tabnext<CR>
-" o - Only
+" o - open
+nnoremap <leader>on :NERDTree<CR>
+" o - only
 nnoremap <leader>ot :tabonly<CR>
-nnoremap <leader>ow <C-w>o " only window
-" n - New
+nnoremap <leader>ow <C-w>o
+" n - new
 nnoremap <leader>nt :$tabnew %<CR>
 " r - reload
-nnoremap <leader>rt :edit<CR> " reload tab
-" q - Quit
+nnoremap <leader>rt :edit<CR>
+" q - quit
 nnoremap <leader>qt :tabclose<CR>
 nnoremap <leader>qw <C-w>q " quit tab
 " ---
