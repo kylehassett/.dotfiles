@@ -1,3 +1,9 @@
 {
-    "colors.filetypes": ["*"]
+    "coc.preferences.jumpCommand": "tabe",
+    "colors.filetypes": ["*"],
+    "diagnostic.checkCurrentLine": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "svelte.enable-ts-plugin": true
 }

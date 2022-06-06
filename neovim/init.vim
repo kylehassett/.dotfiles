@@ -108,8 +108,20 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 " --
-" ++ Cursor hold reveals identical symbols
-autocmd CursorHold * silent call CocActionAsync('highlight')
+
+
+" LightLine
+" ++ Replace filename component of Lightline statusline
+let g:lightline = {
+      \ 'component_function': {
+      \   'filename': 'FilenameForLightline'
+      \ }
+      \ }
+
+" Show full path of filename
+function! FilenameForLightline()
+    return expand('%')
+endfunction
 " --
 
 
@@ -130,7 +142,7 @@ let NERDTreeShowHidden=1
 " --
 " ++ If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
 " autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-"    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+"    \ let buf=bufnr() | buffer# | execute 'normal! \<C-W>w' | execute 'buffer'.buf | endif
 " --
 " ++ Open the existing NERDTree on each new tab.
 " autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
@@ -152,14 +164,12 @@ let g:indent_guides_enable_on_vim_startup = 1
 nmap <leader>ac <Plug>(coc-codeaction)
 xmap <leader>as <Plug>(coc-codeaction-selected)
 nmap <leader>as <Plug>(coc-codeaction-selected)
-" c - close
-nnoremap <leader>Cn :NERDTreeClose<CR>
 " c - code
-nnoremap <leader>cd <Plug>(coc-definition)
-nnoremap <leader>ci <Plug>(coc-implementation)
-nnoremap <leader>cn <Plug>(coc-rename)
-nnoremap <leader>cr <Plug>(coc-references)
-nnoremap <leader>ct <Plug>(coc-type-definition)
+nmap <leader>cd <Plug>(coc-definition)
+nmap <leader>ci <Plug>(coc-implementation)
+nmap <leader>cn <Plug>(coc-rename)
+nmap <leader>cr <Plug>(coc-references)
+nmap <leader>ct <Plug>(coc-type-definition)
 " f - find
 nnoremap <leader>fc :Ag<CR>
 nnoremap <leader>ff :FZF<CR>
@@ -182,6 +192,7 @@ nnoremap <leader>nt :$tabnew %<CR>
 " r - reload
 nnoremap <leader>rt :edit<CR>
 " q - quit
+nnoremap <leader>qn :NERDTreeClose<CR>
 nnoremap <leader>qt :tabclose<CR>
 nnoremap <leader>qw <C-w>q " quit tab
 " ---

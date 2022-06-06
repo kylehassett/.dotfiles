@@ -6,15 +6,18 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'caskroom/cask'
-
+tap 'heroku/brew' 
 
 # Formulae (In logical groups)
 
 ## General
+brew 'direnv'
 brew 'fish'
 brew 'git'
+brew 'heroku'
 brew 'neovim'
 brew 'node'
+brew 'postgresql'
 brew 'python'
 brew 'vim'
 brew 'yarn'
@@ -30,7 +33,6 @@ brew 'cmake'
 
 
 # Casks
-
 cask 'adobe-creative-cloud'
 cask 'alfred'
 cask 'android-sdk'

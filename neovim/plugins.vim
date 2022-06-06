@@ -6,6 +6,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'airblade/vim-rooter'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'gabrielpoca/replacer.nvim'
+  Plug 'itchyny/lightline.vim'
   " Plug 'jiangmiao/auto-pairs'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
@@ -20,5 +21,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'preservim/nerdtree'
   Plug 'sheerun/vim-polyglot'
   " Plug 'tpope/vim-sleuth'
+  Plug 'vim-scripts/PreserveNoEOL'
 
 call plug#end()

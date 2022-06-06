@@ -2,8 +2,6 @@
     "breadcrumbs.enabled": true,
     "cSpell.language": "en",
     "cSpell.userWords": [
-        "Kyphotic",
-        "Unmount",
         "appspot",
         "copyright",
         "daos",
@@ -11,8 +9,10 @@
         "firebaseapp",
         "fontawesome",
         "formik",
+        "gealio",
         "hassett",
         "keyframes",
+        "Kyphotic",
         "logicals",
         "musiqu",
         "musique",
@@ -21,13 +21,14 @@
         "signup",
         "sqlite",
         "strftime",
+        "Unmount",
         "werkzeug"
     ],
     "editor.autoClosingBrackets": "never",
     "editor.dragAndDrop": false,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
-    "editor.fontSize": 15,
+    "editor.fontSize": 13,
     "editor.minimap.enabled": false,
     "editor.rulers": [100],
     "editor.suggestSelection": "first",
@@ -47,17 +48,21 @@
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
     "indentRainbow.colors": [
-        "rgba(255,255,64,0.05)",
-        "rgba(127,255,127,0.05)",
-        "rgba(255,127,255,0.05)",
-        "rgba(79,236,236,0.05)"
+        "rgba(24, 78, 119,0.15)",
+        "rgba(30, 96, 145,0.15)",
+        "rgba(26, 117, 159, 0.15)",
+        "rgba(22, 138, 173,0.15)",
+        "rgba(52, 160, 164,0.15)",
+        "rgba(82, 182, 154,0.15)",
+        "rgba(82, 182, 154,0.1)",
+        "rgba(82, 182, 154,0.05)",
+        "rgba(82, 182, 154,0.025)"
     ],
     "indentRainbow.errorColor": "rgba(128,32,32,0.05)",
     "python.jediEnabled": false,
     "python.languageServer": "Default",
     "terminal.integrated.rendererType": "dom",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Dracula",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
@@ -70,4 +75,10 @@
         "editor.tabSize": 4
     },
     "editor.cursorSmoothCaretAnimation": true,
+    "window.zoomLevel": -1,
+    "vsicons.dontShowNewVersionMessage": true,
+    "svelte.enable-ts-plugin": true,
+    "terminal.integrated.tabs.description": "${task}",
+    "terminal.integrated.tabs.title": "${cwdFolder}",
+    "editor.formatOnSave": true,
 }
