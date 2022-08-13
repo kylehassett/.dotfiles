@@ -17,6 +17,7 @@ set fileencoding=utf-8
 set guifont=JetBrains\ Mono:13
 set hidden
 set ignorecase
+set list
 set nobackup
 set nowritebackup
 set nowrap
@@ -110,6 +111,43 @@ endfunction
 " --
 
 
+" indent-blankline
+" ++
+lua << EOF
+vim.opt.listchars:append "eol:↴"
+
+vim.cmd [[highlight IndentBlanklineIndent1 guibg=#184e77 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent2 guibg=#1e6091 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent3 guibg=#1a759f gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent4 guibg=#168aad gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent5 guibg=#34a0a4 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent6 guibg=#52b69a gui=nocombine]]
+
+require("indent_blankline").setup {
+    char = "",
+    char_highlight_list = {
+        "IndentBlanklineIndent1",
+        "IndentBlanklineIndent2",
+        "IndentBlanklineIndent3",
+        "IndentBlanklineIndent4",
+        "IndentBlanklineIndent5",
+        "IndentBlanklineIndent6",
+    },
+    space_char_highlight_list = {
+        "IndentBlanklineIndent1",
+        "IndentBlanklineIndent2",
+        "IndentBlanklineIndent3",
+        "IndentBlanklineIndent4",
+        "IndentBlanklineIndent5",
+        "IndentBlanklineIndent6",
+    },
+    show_end_of_line = true,
+    show_trailing_blankline_indent = false,
+}
+EOF
+" --
+
+
 " LightLine
 " ++ Replace filename component of Lightline statusline
 let g:lightline = {
@@ -147,6 +185,7 @@ let NERDTreeShowHidden=1
 " ++ Open the existing NERDTree on each new tab.
 " autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 " --
+
 
 " vim-indent
 " ++ General

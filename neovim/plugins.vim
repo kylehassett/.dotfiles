@@ -13,8 +13,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'kevinoid/vim-jsonc'
   Plug 'leafOfTree/vim-matchtag'
+  Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'mfussenegger/nvim-dap'
-  Plug 'nathanaelkane/vim-indent-guides'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'Pocco81/AutoSave.nvim'
   Plug 'preservim/nerdcommenter'
