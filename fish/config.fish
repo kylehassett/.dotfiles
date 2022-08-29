@@ -3,9 +3,27 @@ if status is-interactive
 end
 
 # Personalization
-alias cl clear
-alias ls "ls -Fla"
-alias nvid "neovide --multigrid"
+function cl
+    clear && printf '\e[3J'
+end
+if not test -e ~/.config/fish/functions/cl.fish
+    funcsave cl
+end
+
+function la
+    ls -Fla
+end
+if not test -e ~/.config/fish/functions/la.fish
+    funcsave la
+end
+
+function nvid
+    neovide --multigrid $argv
+end
+if not test -e ~/.config/fish/functions/nvid.fish
+    funcsave nvid
+end
+
 set EDITOR nvim
 set VISUAL nvim
 

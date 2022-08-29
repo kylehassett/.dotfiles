@@ -80,5 +80,13 @@
     "svelte.enable-ts-plugin": true,
     "terminal.integrated.tabs.description": "${task}",
     "terminal.integrated.tabs.title": "${cwdFolder}",
+    "terminal.integrated.profiles.osx": {
+        "fish": {
+            "path": "/usr/local/bin/fish", // overriding
+            "args": [
+                "-l"
+            ]
+        }
+    },
     "editor.formatOnSave": true,
 }

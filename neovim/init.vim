@@ -110,6 +110,10 @@ function! s:check_back_space() abort
 endfunction
 " --
 
+" FZF
+" ++
+let $FZF_DEFAULT_COMMAND = 'ag --hidden -l --ignore .git ""'
+" --
 
 " indent-blankline
 " ++
@@ -165,6 +169,7 @@ endfunction
 
 " NERDTree
 " ++ General
+let NERDTreeIgnore=['.DS_Store']
 let NERDTreeShowHidden=1
 " --
 " ++ Personalization

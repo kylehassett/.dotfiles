@@ -13,6 +13,7 @@ tap 'heroku/brew'
 ## General
 brew 'direnv'
 brew 'fish'
+brew 'fzf'
 brew 'git'
 brew 'heroku'
 brew 'neovim'

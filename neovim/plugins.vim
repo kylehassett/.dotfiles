@@ -17,6 +17,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'mfussenegger/nvim-dap'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'Pocco81/AutoSave.nvim'
+  Plug 'steelsojka/headwind.nvim'
   Plug 'preservim/nerdcommenter'
   Plug 'preservim/nerdtree'
   Plug 'sheerun/vim-polyglot'
