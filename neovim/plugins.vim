@@ -11,17 +11,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'dracula/vim', { 'as': 'dracula' }
-  Plug 'kevinoid/vim-jsonc'
   Plug 'leafOfTree/vim-matchtag'
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'mfussenegger/nvim-dap'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'neovim/nvim-lspconfig'
   Plug 'Pocco81/AutoSave.nvim'
   Plug 'steelsojka/headwind.nvim'
   Plug 'preservim/nerdcommenter'
-  Plug 'preservim/nerdtree'
-  Plug 'sheerun/vim-polyglot'
-  " Plug 'tpope/vim-sleuth'
-  Plug 'vim-scripts/PreserveNoEOL'
+  " Plug 'preservim/nerdtree' " Removing to force myself to not use a file explorer
 
 call plug#end()

@@ -25,6 +25,8 @@ brew 'vim'
 brew 'yarn'
 
 ## Neovim extension dependencies
+brew 'gcc'
+brew 'lua-language-server'
 brew 'ripgrep'
 brew 'the_silver_searcher'
 
