@@ -35,7 +35,8 @@ set EDITOR nvim
 set VISUAL nvim
 
 # Set default Node js version
-set --universal nvm_default_version v16.16.0
+set --universal nvm_default_version v16.17.0
+nvm use default
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/kylehassett/Development/google-cloud-sdk/path.fish.inc' ]; . '/Users/kylehassett/Development/google-cloud-sdk/path.fish.inc'; end

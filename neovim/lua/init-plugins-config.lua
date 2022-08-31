@@ -19,7 +19,7 @@ require("autosave").setup(
 
 
 -- FZF
-vim.env.FZF_DEFAULT_COMMAND = 'rg --files --hidden -g "!.git/" -g "!.github/"'
+vim.env.FZF_DEFAULT_COMMAND = 'rg --files --hidden -g "!.git/" -g "!.github/" -g "!node_modules/"'
 
 
 -- Indent blankline
@@ -59,7 +59,21 @@ require("indent_blankline").setup {
 local lsp_config = require('lspconfig')
 
 lsp_config.ccls.setup{}
+lsp_config.cssls.setup{}
+lsp_config.dockerls.setup{}
+lsp_config.emmet_ls.setup{
+    filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less",  }
+}
+lsp_config.eslint.setup{}
+lsp_config.html.setup{}
+lsp_config.jsonls.setup{}
 lsp_config.marksman.setup{}
+lsp_config.prismals.setup{}
+lsp_config.pyright.setup{}
+lsp_config.sqlls.setup{}
+lsp_config.svelte.setup{}
+lsp_config.tailwindcss.setup{}
+lsp_config.tsserver.setup{}
 
 
 -- Lualine
@@ -71,6 +85,7 @@ require('nvim-treesitter.configs').setup {
     auto_install = true,
     ensure_installed = {
         'c',
+        'css',
         'lua',
         'dockerfile',
         'gitignore',

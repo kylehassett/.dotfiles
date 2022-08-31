@@ -9,6 +9,7 @@ echo "Installing fisher, linking fish_plugins, and installing plugins..."
 curl -sL https://raw.githubusercontent.com/orgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisherj
 ln -s ~/.dotfiles/fish/fish_plugins ~/.config/fish/fish_plugins
 fisher update
+fisher install jorgebucaran/nvm.fish
 
 echo "Installing node with nvm"
 nvm install lts

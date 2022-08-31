@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'dracula/vim', { 'as': 'dracula' }
+  Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'leafOfTree/vim-matchtag'
   Plug 'lukas-reineke/indent-blankline.nvim'
