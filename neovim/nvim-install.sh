@@ -15,4 +15,11 @@ ln -s ~/.dotfiles/neovim/plugins.vim ~/.config/nvim/plugins.vim
 ln -s ~/.dotfiles/neovim/init.lua ~/.config/nvim/init.lua
 ln -s ~/.dotfiles/neovim/lua/ ~/.config/nvim/lua/
 
+echo "Setting up downloaded LSP server binaries"
+
+mkdir -p ~/.local/bin && fish_add_path ~/.local/bin/
+chmod -R +x ~/.dotfiles/neovim/lsp-server-bin
+
+ln -s ~/.dotfiles/neovim/lsp-server-bin/marksman ~/.local/bin/marksman
+
 echo "Neovim's done."

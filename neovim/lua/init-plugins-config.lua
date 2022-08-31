@@ -56,9 +56,10 @@ require("indent_blankline").setup {
 
 
 -- LSP config
-local lspConfig = require('lspconfig')
+local lsp_config = require('lspconfig')
 
-lspConfig.ccls.setup{}
+lsp_config.ccls.setup{}
+lsp_config.marksman.setup{}
 
 
 -- Lualine

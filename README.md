@@ -39,10 +39,11 @@ At the time of me typing this, this is prior to me ever learning how to write sh
 
 Ok so a good amount has changed since I started doing this...
 
-1. I took the time to learn Vim.
-  a. Starting with using the Vim extension for Vscode, which is my daily workflow now.
-2. I am now making the plunge into Neovim only for all development.
-  a. I'm realizing that I love using Vim for editing, and I need to remove the crutch of using Vscode because I use the mouse too much.
-  b. I recommend everyone start using Vim by using their favorite IDE's Vim extension, it was truly a gateway-drug-like experience.
-3. I have started a software project called [Gealio](https://geal.io)
-  a. Along with work itself, hobbies, loved ones, this will be my focus.
+1. I took the time to learn Vim.<br />
+    a. Starting with using the Vim extension for Vscode, which is my daily workflow now.<br />
+2. I am now making the plunge into Neovim only for all development.<br />
+    a. I'm realizing that I love using Vim for editing, and I need to remove the crutch of using Vscode because I use the mouse too much.<br />
+    b. I recommend everyone start using Vim by using their favorite IDE's Vim extension, it was truly a gateway-drug-like experience.<br />
+3. I have started a software project called [Gealio](https://geal.io)<br />
+    a. Along with work itself, hobbies, loved ones, this will be my focus.<br />
+
