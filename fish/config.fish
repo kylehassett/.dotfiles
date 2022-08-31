@@ -10,6 +10,13 @@ if not test -e ~/.config/fish/functions/cl.fish
     funcsave cl
 end
 
+function ff
+    rg --files --hidden -g "!.git/" -g "!.github/" | fzf-tmux -p --reverse | xargs nvim
+end
+if not test -e ~/.config/fish/functions/ff.fish
+    funcsave ff
+end
+
 function la
     ls -Fla
 end

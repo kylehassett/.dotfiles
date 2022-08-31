@@ -6,15 +6,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'airblade/vim-rooter'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'gabrielpoca/replacer.nvim'
-  Plug 'itchyny/lightline.vim'
   " Plug 'jiangmiao/auto-pairs'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'dracula/vim', { 'as': 'dracula' }
+  Plug 'kyazdani42/nvim-web-devicons'
   Plug 'leafOfTree/vim-matchtag'
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'mfussenegger/nvim-dap'
   Plug 'neovim/nvim-lspconfig'
+  Plug 'nvim-lualine/lualine.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'Pocco81/AutoSave.nvim'
   Plug 'steelsojka/headwind.nvim'
   Plug 'preservim/nerdcommenter'
