@@ -108,9 +108,10 @@ require('nvim-treesitter.configs').setup {
         'yaml',
     },
     highlight = {
-        enabled = true,
+        enable = true,
         additional_vim_regex_highlighting = false,
     },
+    indent = { enabled = true, }
 }
 
 -- vim-indent
