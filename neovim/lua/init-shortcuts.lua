@@ -23,16 +23,20 @@ vim.api.nvim_set_keymap('n', '<leader>cf', ':Lspsaga lsp_finder<CR>', { noremap 
 -- <c>ode <r>ename
 vim.api.nvim_set_keymap("n", "<leader>cr", ":Lspsaga rename<CR>", { noremap = true, silent = true, })
 -- f
--- <f>ind <c>ode <r>ipgrep
-vim.api.nvim_set_keymap('n', '<leader>fc', ':Rg ', { noremap = true, silent = true, })
+-- <f>ind <c>ode
+vim.api.nvim_set_keymap('n', '<leader>sp', ':Rg<CR>', { noremap = true, silent = true, })
 -- <f>ind <f>ile
 vim.api.nvim_set_keymap('n', '<leader>ff', ':FZF<CR>', { noremap = true, silent = true, })
+-- <f>lao<t>erm
+vim.api.nvim_set_keymap('n', '<leader>ft', ':FloatermNew<CR>', { noremap = true, silent = true, })
 -- h
 -- left movement for tabs
 vim.api.nvim_set_keymap('n', '<leader>ht', ':tabprevious<CR>', { noremap = true, silent = true, })
 -- <h>ide <h>ilight
 vim.api.nvim_set_keymap('n', '<leader>hh', ':noh<CR>', { noremap = true, silent = true, })
 -- l
+-- <l>azy<g>it
+vim.api.nvim_set_keymap('n', '<leader>lg', ':FloatermNew lazygit<CR>', { noremap = true, silent = true, })
 -- right movement for tabs
 vim.api.nvim_set_keymap('n', '<leader>lt', ':tabnext<CR>', { noremap = true, silent = true, })
 -- o

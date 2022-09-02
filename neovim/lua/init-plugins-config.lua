@@ -55,25 +55,46 @@ require("indent_blankline").setup {
 }
 
 
--- LSP config
-local lsp_config = require('lspconfig')
-
-lsp_config.ccls.setup{}
-lsp_config.cssls.setup{}
-lsp_config.dockerls.setup{}
-lsp_config.emmet_ls.setup{
-    filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less",  }
+-- LSP related configs
+require("mason").setup()
+require("mason-lspconfig").setup({ ensure_installed = {
+    'angularls',
+    'clangd',
+    'cssls',
+    'dockerls',
+    'eslint',
+    'emmet_ls',
+    'html',
+    'jsonls',
+    'jdtls',
+    'sumneko_lua',
+    'marksman',
+    'prismals',
+    'pyright',
+    'sqlls',
+    'svelte',
+    'tailwindcss',
+    'tsserver',
+    'yamlls',
+} })
+require('lspconfig').angularls.setup{}
+require('lspconfig').clangd.setup{}
+require('lspconfig').ccls.setup{}
+require('lspconfig').cssls.setup{}
+require('lspconfig').dockerls.setup{}
+require('lspconfig').emmet_ls.setup{
+    filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", 'svelte',  }
 }
-lsp_config.eslint.setup{}
-lsp_config.html.setup{}
-lsp_config.jsonls.setup{}
-lsp_config.marksman.setup{}
-lsp_config.prismals.setup{}
-lsp_config.pyright.setup{}
-lsp_config.sqlls.setup{}
-lsp_config.svelte.setup{}
-lsp_config.tailwindcss.setup{}
-lsp_config.tsserver.setup{}
+require('lspconfig').eslint.setup{}
+require('lspconfig').html.setup{}
+require('lspconfig').jsonls.setup{}
+require('lspconfig').marksman.setup{}
+require('lspconfig').prismals.setup{}
+require('lspconfig').pyright.setup{}
+require('lspconfig').sqlls.setup{}
+require('lspconfig').svelte.setup{}
+require('lspconfig').tailwindcss.setup{}
+require('lspconfig').tsserver.setup{}
 
 
 -- lspsaga
