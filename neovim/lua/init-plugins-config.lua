@@ -76,6 +76,10 @@ lsp_config.tailwindcss.setup{}
 lsp_config.tsserver.setup{}
 
 
+-- lspsaga
+require('lspsaga').init_lsp_saga()
+
+
 -- Lualine
 require('lualine').setup { options = { icons_enabled = false } }
 

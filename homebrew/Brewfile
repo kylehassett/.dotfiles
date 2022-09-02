@@ -6,7 +6,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'caskroom/cask'
-tap 'heroku/brew' 
+tap 'heroku/brew'
 
 # Formulae (In logical groups)
 
@@ -16,7 +16,7 @@ brew 'fish'
 brew 'fzf'
 brew 'git'
 brew 'heroku'
-brew 'neovim'
+brew 'neovim', args: ["HEAD"]
 brew 'node'
 brew 'postgresql'
 brew 'pnpm'
