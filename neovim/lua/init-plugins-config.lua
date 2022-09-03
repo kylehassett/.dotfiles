@@ -54,6 +54,12 @@ require("indent_blankline").setup {
     show_trailing_blankline_indent = false,
 }
 
+-- Lualine
+require('lualine').setup { options = { icons_enabled = false } }
+
+-- vim-indent
+vim.g.indent_guides_enable_on_vim_startup = 1
+
 
 -- LSP related configs
 require("mason").setup()
@@ -77,33 +83,31 @@ require("mason-lspconfig").setup({ ensure_installed = {
     'tsserver',
     'yamlls',
 } })
-require('lspconfig').angularls.setup{}
-require('lspconfig').clangd.setup{}
-require('lspconfig').ccls.setup{}
-require('lspconfig').cssls.setup{}
-require('lspconfig').dockerls.setup{}
-require('lspconfig').emmet_ls.setup{
+
+local lsp_config = require'lspconfig'
+local coq = require'coq'
+lsp_config.angularls.setup(coq.lsp_ensure_capabilities{})
+lsp_config.clangd.setup(coq.lsp_ensure_capabilities{})
+lsp_config.ccls.setup(coq.lsp_ensure_capabilities{})
+lsp_config.cssls.setup(coq.lsp_ensure_capabilities{})
+lsp_config.dockerls.setup(coq.lsp_ensure_capabilities{})
+lsp_config.emmet_ls.setup(coq.lsp_ensure_capabilities{
     filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", 'svelte',  }
-}
-require('lspconfig').eslint.setup{}
-require('lspconfig').html.setup{}
-require('lspconfig').jsonls.setup{}
-require('lspconfig').marksman.setup{}
-require('lspconfig').prismals.setup{}
-require('lspconfig').pyright.setup{}
-require('lspconfig').sqlls.setup{}
-require('lspconfig').svelte.setup{}
-require('lspconfig').tailwindcss.setup{}
-require('lspconfig').tsserver.setup{}
+})
+lsp_config.eslint.setup(coq.lsp_ensure_capabilities{})
+lsp_config.html.setup(coq.lsp_ensure_capabilities{})
+lsp_config.jsonls.setup(coq.lsp_ensure_capabilities{})
+lsp_config.marksman.setup(coq.lsp_ensure_capabilities{})
+lsp_config.prismals.setup(coq.lsp_ensure_capabilities{})
+lsp_config.pyright.setup(coq.lsp_ensure_capabilities{})
+lsp_config.sqlls.setup(coq.lsp_ensure_capabilities{})
+lsp_config.svelte.setup(coq.lsp_ensure_capabilities{})
+lsp_config.tailwindcss.setup(coq.lsp_ensure_capabilities{})
+lsp_config.tsserver.setup(coq.lsp_ensure_capabilities{})
 
 
 -- lspsaga
 require('lspsaga').init_lsp_saga()
-
-
--- Lualine
-require('lualine').setup { options = { icons_enabled = false } }
-
 
 -- Treesitter
 require('nvim-treesitter.configs').setup {
@@ -139,6 +143,5 @@ require('nvim-treesitter.configs').setup {
     indent = { enabled = true, }
 }
 
--- vim-indent
-vim.g.indent_guides_enable_on_vim_startup = 1
+vim.cmd('COQnow')
 

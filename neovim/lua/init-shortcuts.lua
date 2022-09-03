@@ -2,8 +2,7 @@
     Keyboard shortcut system
     <leader><v>erb<n>oun EX: new tab -> <leader>nt
     Thinking in VIM, but for extensions, tabs, windows, etc.
-    Use capital letters for verb if there are multiple semantically useful words
-    for the short cuts.
+    Use capital letters for verb if there are multiple semantically useful words for the short cuts.
 --]]
 
 -- [
@@ -16,12 +15,14 @@ vim.api.nvim_set_keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { no
 -- <c>ode <a>ction
 vim.api.nvim_set_keymap('n', '<leader>ca', ':Lspsaga code_action<CR>', { noremap = true, silent = true, })
 vim.api.nvim_set_keymap("v", "<leader>ca", ":Lspsaga range_code_action<CR>", { noremap = true, silent = true, })
--- <c>ode <d>efinition
-vim.api.nvim_set_keymap("n", "<leader>cd", ":Lspsaga preview_definition<CR>", { silent = true, })
--- <c>ode <f>inder
-vim.api.nvim_set_keymap('n', '<leader>cf', ':Lspsaga lsp_finder<CR>', { noremap = true, silent = true, })
+-- <c>ode <d>oc
+vim.api.nvim_set_keymap("n", "<leader>cd", ":Lspsaga hover_doc<CR>", { silent = true, })
+-- <c>ode <p>review
+vim.api.nvim_set_keymap("n", "<leader>cp", ":Lspsaga preview_definition<CR>", { silent = true, })
 -- <c>ode <r>ename
 vim.api.nvim_set_keymap("n", "<leader>cr", ":Lspsaga rename<CR>", { noremap = true, silent = true, })
+-- <c>ode <u>sage
+vim.api.nvim_set_keymap('n', '<leader>cu', ':Lspsaga lsp_finder<CR>', { noremap = true, silent = true, })
 -- f
 -- <f>ind <c>ode
 vim.api.nvim_set_keymap('n', '<leader>sp', ':Rg<CR>', { noremap = true, silent = true, })
