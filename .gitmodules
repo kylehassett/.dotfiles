@@ -7,3 +7,9 @@
 [submodule "fish/iterm"]
 	path = fish/iterm
 	url = https://github.com/dracula/iterm.git
+[submodule "zsh/terminal-app"]
+	path = zsh/terminal-app
+	url = https://github.com/dracula/terminal-app.git
+[submodule "zsh/iterm"]
+	path = zsh/iterm
+	url = https://github.com/dracula/iterm.git

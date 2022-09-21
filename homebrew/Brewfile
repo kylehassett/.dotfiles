@@ -12,9 +12,8 @@ tap 'heroku/brew'
 
 ## General
 brew 'direnv'
-brew 'fish'
+# brew 'fish' # After watching Theo from ping.gg's video about how people over do dotfiles, I'm skipping fish as it's unnecessarily complex
 brew 'fzf'
-brew 'git'
 brew 'heroku'
 brew 'neovim', args: ["HEAD"]
 brew 'node'
@@ -42,7 +41,6 @@ cask 'alfred'
 cask 'android-sdk'
 cask 'android-studio'
 cask 'authy'
-cask 'avast-security'
 cask 'bitwarden'
 cask 'docker'
 cask 'figma'

@@ -1,8 +1,9 @@
-#!/bin/bash
+#!/usr/bin/zsh
 
 echo "Checking if you have Homebrew installed...\n"
 
-if brew --version ; then
+if brew --version
+then
     echo "You already have it, lovely.\n"
 else
     echo "You don't have it, need to install it..."
@@ -12,6 +13,6 @@ fi
 
 echo "Installing the contents of the brewfile..."
 
-bundle install && brew bundle
+cd ~/.dotfiles/homebrew && brew bundle && cd ~/.dotfiles
 
 echo "Great, now you have all of the programs you need/want."

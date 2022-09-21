@@ -1,4 +1,4 @@
-vim.cmd('source $HOME/.config/nvim/plugins.vim')
+vim.cmd('source ~/.config/nvim/plugins.vim')
 
 require'init-options'
 require'init-plugins-config'

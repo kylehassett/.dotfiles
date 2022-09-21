@@ -1,25 +1,22 @@
-#!/bin/sh
+#!/bin/zsh
 
 echo "Bootstraping kylehassett's dotfiles"
 
-/bin/bash ./homebrew/homebrew-install.sh
+/bin/zsh ./homebrew/homebrew-install.sh
+
 
 echo "Working with each program's dotfile now..."
 
-/bin/bash ./git/git-install.sh
-/bin/bash ./vscode/vscode-install.sh
-/bin/bash ./neovim/neovim-install.sh
-/bin/bash ./neovide/neovide-install.sh
-/bin/bash ./fish/fish-install.sh
+/bin/zsh ./git/git-install.sh
+/bin/zsh ./zsh/zsh-install.sh
+/bin/zsh ./vscode/vscode-install.sh
+/bin/zsh ./neovim/neovim-install.sh
+/bin/zsh ./neovide/neovide-install.sh
 
-echo "Checking for nvm and node"
 
-if [ ! -d "~/.nvm"]
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-fi
+echo "Ok done, steps that you have to do now...\n"
 
-echo "Ok done, steps that you have to do now..."
-
+echo "- Dracula    - Setup Dracula for terminal and iTerm2, each file can be found in the zsh folder of this dotfile repo."
 echo "- Warp       - Install from https://warp.dev (It's not available via homebrew yet), set dracula as theme, JetBrains Mono as the font, and 13 as the font size (Optional: Repeat steps for Terminal app)."
 echo "- XCode      - Sign into app store, download, then install command line tools, setup vim commands."
 echo "- Spectacle  - Change the keyboard shortcuts"
