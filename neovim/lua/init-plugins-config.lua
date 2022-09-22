@@ -1,21 +1,7 @@
 -- Autosave
--- require("autosave").setup(
---     {
---         enabled = true,
---         execution_message = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"),
---         events = {"BufLeave", "BufWinLeave", "TabLeave", "WinLeave"},
---         conditions = {
---             exists = true,
---             filename_is_not = {},
---             filetype_is_not = {},
---             modifiable = true
---         },
---         write_all_buffers = false,
---         on_off_commands = true,
---         clean_command_line_interval = 0,
---         debounce_delay = 135
---     }
--- )
+require("auto-save").setup({
+    events = {"BufLeave", "BufWinLeave", "TabLeave", "WinLeave"},
+})
 
 
 -- FZF
@@ -85,7 +71,10 @@ require("mason-lspconfig").setup({ ensure_installed = {
 } })
 
 local lsp_config = require'lspconfig'
+
+vim.cmd("let g:coq_settings = { 'auto_start': 'shut-up' }")
 local coq = require'coq'
+
 lsp_config.angularls.setup(coq.lsp_ensure_capabilities{})
 lsp_config.clangd.setup(coq.lsp_ensure_capabilities{})
 lsp_config.ccls.setup(coq.lsp_ensure_capabilities{})

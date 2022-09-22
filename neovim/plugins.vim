@@ -19,7 +19,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'nvim-lualine/lualine.nvim'
-  Plug 'Pocco81/AutoSave.nvim'
+  Plug 'Pocco81/auto-save.nvim'
   Plug 'steelsojka/headwind.nvim'
 
 call plug#end()
