@@ -3,7 +3,7 @@ source $HOME/.config/nvim/plugins.vim
 
 " Neovim
 " ++ General
-colorscheme dracula 
+colorscheme dracula
 set autoindent
 set autoread
 set background=dark
@@ -104,7 +104,7 @@ EOF
 "       \ <SID>check_back_space() ? "\<TAB>" :
 "       \ coc#refresh()
 " inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-" 
+"
 " function! s:check_back_space() abort
 "   let col = col('.') - 1
 "   return !col || getline('.')[col - 1]  =~# '\s'

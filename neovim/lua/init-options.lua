@@ -6,7 +6,7 @@ vim.bo.autoread = true
 vim.o.background = 'dark'
 -- vim.o.clipboard = vim.api.nvim_get_option('clipboard') .. 'unnamed' -- Commenting out, need to stop being afraid of registers.
 -- vim.bo.formatoptions:remove({ 'c', 'r', 'o', })
-vim.wo.colorcolumn = "80"
+vim.wo.colorcolumn = "79,100"
 vim.wo.cursorline = true
 vim.o.encoding = 'utf-8'
 vim.bo.expandtab = true
@@ -58,4 +58,3 @@ vim.cmd([[
     nnoremap <silent> <C-k> :call WinMove('k')<CR>
     nnoremap <silent> <C-l> :call WinMove('l')<CR>
 ]])
-

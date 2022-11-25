@@ -3,14 +3,20 @@
     "cSpell.language": "en",
     "cSpell.userWords": [
         "appspot",
+        "clsx",
         "copyright",
         "daos",
+        "dotenv",
         "emotionals",
+        "extralight",
+        "fastapi",
         "firebaseapp",
         "fontawesome",
         "formik",
+        "geal",
         "gealio",
         "hassett",
+        "interactable",
         "keyframes",
         "Kyphotic",
         "logicals",
@@ -18,7 +24,10 @@
         "musique",
         "ohpin",
         "semibold",
+        "sendgrid",
+        "sessionmaker",
         "signup",
+        "sqlalchemy",
         "sqlite",
         "strftime",
         "Unmount",
@@ -74,7 +83,8 @@
         "editor.tabSize": 4
     },
     "[python]": {
-        "editor.tabSize": 4
+        "editor.tabSize": 4,
+        "editor.formatOnType": true
     },
     "editor.cursorSmoothCaretAnimation": true,
     "window.zoomLevel": -1,
@@ -92,4 +102,8 @@
     },
     "editor.formatOnSave": true,
     "workbench.colorTheme": "Dracula",
+    "zenMode.fullScreen": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false,
+    "database-client.highlightSQLBlock": true,
 }
