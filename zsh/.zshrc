@@ -2,7 +2,7 @@
 alias cl="clear && printf '\e[3J'"
 alias ff="rg --files --hidden -g "!.git/" -g "!.github/" | fzf-tmux -p --reverse | xargs nvim"
 alias la="ls -Fla"
-alias nvid="neovide --multigrid $argv"
+alias nvid="neovide --multigrid --nofork $argv"
 
 export EDITOR="nvim"
 export PS1="%1~ $ "
@@ -30,6 +30,10 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Path changes
+export PATH=$PATH:/Users/kylehassett/go/bin
 
 
 # Hook into direnv KEEP AT THE END OF THE FILE

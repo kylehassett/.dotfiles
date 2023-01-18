@@ -5,7 +5,7 @@ require("auto-save").setup({
 
 
 -- FZF
-vim.env.FZF_DEFAULT_COMMAND = 'rg --files --hidden -g "!.git/" -g "!.github/" -g "!node_modules/"'
+vim.env.FZF_DEFAULT_COMMAND = 'rg --files -g "!.git/" -g "!.github/" -g "!node_modules/" --hidden'
 
 
 -- Indent blankline
@@ -51,6 +51,7 @@ vim.g.indent_guides_enable_on_vim_startup = 1
 require("mason").setup()
 require("mason-lspconfig").setup({ ensure_installed = {
     'angularls',
+    'astro',
     'clangd',
     'cssls',
     'dockerls',
@@ -66,6 +67,7 @@ require("mason-lspconfig").setup({ ensure_installed = {
     'sqlls',
     'svelte',
     'tailwindcss',
+    'terraformls',
     'tsserver',
     'yamlls',
 } })

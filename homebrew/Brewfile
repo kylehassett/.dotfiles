@@ -20,6 +20,7 @@ brew 'node'
 brew 'postgresql'
 brew 'pnpm'
 brew 'python'
+brew 'terraform'
 brew 'vim'
 brew 'yarn'
 

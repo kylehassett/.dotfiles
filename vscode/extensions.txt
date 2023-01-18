@@ -6,6 +6,7 @@ donjayamanne.python-extension-pack
 dracula-theme.theme-dracula
 ecmel.vscode-html-css
 editorconfig.editorconfig
+esbenp.prettier-vscode
 evondev.indent-rainbow-palettes
 formulahendry.auto-rename-tag
 GitHub.github-vscode-theme
@@ -24,6 +25,7 @@ njpwerner.autodocstring
 oderwat.indent-rainbow
 PKief.material-icon-theme
 robinbentley.sass-indented
+shd101wyy.markdown-preview-enhanced
 streetsidesoftware.code-spell-checker
 Tyriar.sort-lines
 usernamehw.errorlens
@@ -31,5 +33,7 @@ vadym-vorobel.sort-import-regex
 vscodevim.vim
 VisualStudioExptTeam.vscodeintellicode
 vscode-icons-team.vscode-icons
+waderyan.gitblame
 WallabyJs.quokka-vscode
+yzhang.markdown-all-in-one
 Zignd.html-css-class-completion
