@@ -1,4 +1,5 @@
+[push]
+    autoSetupRemote = true
 [user]
-[user]
-	email = kylehassett@users.noreply.github.com
-	name = kylehassett
+    email = kylehassett@users.noreply.github.com
+    name = kylehassett

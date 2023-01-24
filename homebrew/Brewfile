@@ -5,7 +5,6 @@ tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
-tap 'caskroom/cask'
 tap 'heroku/brew'
 
 # Formulae (In logical groups)
@@ -14,6 +13,7 @@ tap 'heroku/brew'
 brew 'direnv'
 # brew 'fish' # After watching Theo from ping.gg's video about how people over do dotfiles, I'm skipping fish as it's unnecessarily complex
 brew 'fzf'
+brew 'go'
 brew 'heroku'
 brew 'neovim', args: ["HEAD"]
 brew 'node'
@@ -22,6 +22,7 @@ brew 'pnpm'
 brew 'python'
 brew 'terraform'
 brew 'vim'
+brew 'volta' # Seems to be another package manager, but Jason from TrueRev uses it so... I'll do the same.
 brew 'yarn'
 
 ## Neovim extension dependencies
