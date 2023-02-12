@@ -60,7 +60,7 @@ require("mason-lspconfig").setup({ ensure_installed = {
     'html',
     'jsonls',
     'jdtls',
-    'sumneko_lua',
+    'lua_ls',
     'marksman',
     'prismals',
     'pyright',
@@ -98,7 +98,7 @@ lsp_config.tsserver.setup(coq.lsp_ensure_capabilities{})
 
 
 -- lspsaga
-require('lspsaga').init_lsp_saga()
+require('lspsaga').setup()
 
 -- Treesitter
 require('nvim-treesitter.configs').setup {

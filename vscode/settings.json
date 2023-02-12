@@ -88,9 +88,10 @@
     "editor.tabSize": 4
   },
   "[python]": {
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.formatOnType": true
   },
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "window.zoomLevel": -1,
   "vsicons.dontShowNewVersionMessage": true,
   "svelte.enable-ts-plugin": true,
@@ -110,5 +111,8 @@
   "editor.formatOnSave": true,
   "[svelte]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   }
 }

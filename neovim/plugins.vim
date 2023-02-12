@@ -8,7 +8,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'voldikss/vim-floaterm'
   Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
-  Plug 'gpanders/editorconfig.nvim'
   Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
   Plug 'airblade/vim-gitgutter'
   Plug 'airblade/vim-rooter'
