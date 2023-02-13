@@ -72,30 +72,58 @@ require("mason-lspconfig").setup({ ensure_installed = {
     'yamlls',
 } })
 
-local lsp_config = require'lspconfig'
+-- LSP related configs
+vim.cmd('set completeopt=menu,menuone,noselect')
 
-vim.cmd("let g:coq_settings = { 'auto_start': 'shut-up' }")
-local coq = require'coq'
+local cmp = require'cmp'
 
-lsp_config.angularls.setup(coq.lsp_ensure_capabilities{})
-lsp_config.clangd.setup(coq.lsp_ensure_capabilities{})
-lsp_config.ccls.setup(coq.lsp_ensure_capabilities{})
-lsp_config.cssls.setup(coq.lsp_ensure_capabilities{})
-lsp_config.dockerls.setup(coq.lsp_ensure_capabilities{})
-lsp_config.emmet_ls.setup(coq.lsp_ensure_capabilities{
-    filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", 'svelte',  }
+cmp.setup({
+    mapping = cmp.mapping.preset.insert({
+        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+        ['<Enter>'] = cmp.mapping.confirm({ select = true })
+    }),
+    snippet = {
+        expand = function(args)
+            vim.fn['vsnip#anonymous'](args.body)
+        end
+    },
+    sources = cmp.config.sources(
+        {
+            { name = 'nvim_lsp' },
+            { name = 'vsnip' },
+        },
+        {
+            { name = 'buffer' }
+        }
+    ),
+    view = {
+        entries = 'custom'
+    }
 })
-lsp_config.eslint.setup(coq.lsp_ensure_capabilities{})
-lsp_config.html.setup(coq.lsp_ensure_capabilities{})
-lsp_config.jsonls.setup(coq.lsp_ensure_capabilities{})
-lsp_config.marksman.setup(coq.lsp_ensure_capabilities{})
-lsp_config.prismals.setup(coq.lsp_ensure_capabilities{})
-lsp_config.pyright.setup(coq.lsp_ensure_capabilities{})
-lsp_config.sqlls.setup(coq.lsp_ensure_capabilities{})
-lsp_config.svelte.setup(coq.lsp_ensure_capabilities{})
-lsp_config.tailwindcss.setup(coq.lsp_ensure_capabilities{})
-lsp_config.tsserver.setup(coq.lsp_ensure_capabilities{})
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+local lsp_config = require'lspconfig'
+lsp_config.astro.setup { capabilities = capabilites }
+lsp_config.angularls.setup { capabilities = capabilites }
+lsp_config.clangd.setup { capabilities = capabilites }
+lsp_config.ccls.setup { capabilities = capabilites }
+lsp_config.cssls.setup { capabilities = capabilites }
+lsp_config.dockerls.setup { capabilities = capabilites }
+lsp_config.emmet_ls.setup({
+    capabilities = capabilites,
+    filetypes = { "astro", "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", 'svelte',  }
+})
+lsp_config.eslint.setup { capabilities = capabilites }
+lsp_config.html.setup { capabilities = capabilites }
+lsp_config.jsonls.setup { capabilities = capabilites }
+lsp_config.marksman.setup { capabilities = capabilites }
+lsp_config.prismals.setup { capabilities = capabilites }
+lsp_config.pyright.setup { capabilities = capabilites }
+lsp_config.sqlls.setup { capabilities = capabilites }
+lsp_config.svelte.setup { capabilities = capabilites }
+lsp_config.tailwindcss.setup { capabilities = capabilites }
+lsp_config.tsserver.setup { capabilities = capabilites }
 
 -- lspsaga
 require('lspsaga').setup()
@@ -133,6 +161,4 @@ require('nvim-treesitter.configs').setup {
     },
     indent = { enabled = true, }
 }
-
-vim.cmd('COQnow')
 
