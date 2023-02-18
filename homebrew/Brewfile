@@ -11,7 +11,6 @@ tap 'heroku/brew'
 
 ## General
 brew 'direnv'
-# brew 'fish' # After watching Theo from ping.gg's video about how people over do dotfiles, I'm skipping fish as it's unnecessarily complex
 brew 'fzf'
 brew 'go'
 brew 'heroku'
@@ -20,9 +19,9 @@ brew 'node'
 brew 'postgresql'
 brew 'pnpm'
 brew 'python'
+brew 'stow'
 brew 'terraform'
 brew 'vim'
-brew 'volta' # Seems to be another package manager, but Jason from TrueRev uses it so... I'll do the same.
 brew 'yarn'
 
 ## Neovim extension dependencies
