@@ -10,6 +10,7 @@ tap 'heroku/brew'
 # Formulae (In logical groups)
 
 ## General
+brew 'awscli'
 brew 'direnv'
 brew 'fzf'
 brew 'go'
