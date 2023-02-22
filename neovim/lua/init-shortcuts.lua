@@ -24,10 +24,15 @@ vim.api.nvim_set_keymap("n", "<leader>cr", ":Lspsaga rename<CR>", { noremap = tr
 -- <c>ode <u>sage
 vim.api.nvim_set_keymap('n', '<leader>cu', ':Lspsaga lsp_finder<CR>', { noremap = true, silent = true, })
 -- f
+local builtin = require'telescope.builtin'
+-- <f>ind in <b>uffer
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 -- <f>ind <c>ode
-vim.api.nvim_set_keymap('n', '<leader>sp', ':Rg<CR>', { noremap = true, silent = true, })
+vim.keymap.set('n', '<leader>fc', builtin.live_grep, {})
 -- <f>ind <f>ile
-vim.api.nvim_set_keymap('n', '<leader>ff', ':FZF<CR>', { noremap = true, silent = true, })
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+-- <f>ind in <h>elp
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 -- <f>lao<t>erm
 vim.api.nvim_set_keymap('n', '<leader>ft', ':FloatermNew<CR>', { noremap = true, silent = true, })
 -- h

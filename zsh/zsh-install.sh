@@ -7,13 +7,8 @@ echo "Linking .zshrc..."
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 
 
-echo "Installing nvm, installing node, setting default node version, and installing avn..."
+echo "Installing nvm..."
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-nvm install lts
-nvm use lts
-nvm alias default node
-npm install -g avn avn-nvm
-avn setup
 
 
 echo "Installing zplug..."

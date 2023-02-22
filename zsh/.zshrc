@@ -25,6 +25,7 @@ export PATH=$PATH:/Users/kylehassett/go/bin
 
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
+
 # Hook into direnv KEEP AT THE END OF THE FILE
 eval "$(direnv hook zsh)"
 
