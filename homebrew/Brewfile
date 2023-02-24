@@ -5,12 +5,14 @@ tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
+tap 'aws/tap'
 tap 'heroku/brew'
 
 # Formulae (In logical groups)
 
 ## General
 brew 'awscli'
+brew 'aws-sam-cli'
 brew 'direnv'
 brew 'fzf'
 brew 'go'

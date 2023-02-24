@@ -49,6 +49,20 @@ require('lualine').setup { options = { icons_enabled = false } }
 vim.g.indent_guides_enable_on_vim_startup = 1
 
 
+-- telescope
+local telescope = require'telescope'
+
+telescope.load_extension('media_files')
+telescope.setup {
+    extensions = {
+        media_files = {
+            filetypes = {"png", "jpg", "jpeg", "webm", "pdf"},
+            find_cmd = "rg"
+        }
+    }
+}
+
+
 -- LSP related configs
 require("mason").setup()
 require("mason-lspconfig").setup({ ensure_installed = {
@@ -74,7 +88,7 @@ require("mason-lspconfig").setup({ ensure_installed = {
     'yamlls',
 } })
 
--- LSP related configs
+-- nvim-cmp
 vim.cmd('set completeopt=menu,menuone,noselect')
 
 local cmp = require'cmp'
@@ -118,7 +132,9 @@ lsp_config.emmet_ls.setup({
 })
 lsp_config.eslint.setup { capabilities = capabilites }
 lsp_config.html.setup { capabilities = capabilites }
+lsp_config.jdtls.setup { capabilities = capabilites }
 lsp_config.jsonls.setup { capabilities = capabilites }
+lsp_config.lua_ls.setup { capabilities = capabilites }
 lsp_config.marksman.setup { capabilities = capabilites }
 lsp_config.prismals.setup { capabilities = capabilites }
 lsp_config.pyright.setup { capabilities = capabilites }
@@ -126,6 +142,8 @@ lsp_config.sqlls.setup { capabilities = capabilites }
 lsp_config.svelte.setup { capabilities = capabilites }
 lsp_config.tailwindcss.setup { capabilities = capabilites }
 lsp_config.tsserver.setup { capabilities = capabilites }
+lsp_config.terraformls.setup { capabilities = capabilites }
+lsp_config.yamlls.setup { capabilities = capabilites }
 
 -- lspsaga
 require('lspsaga').setup()

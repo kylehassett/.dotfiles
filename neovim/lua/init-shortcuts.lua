@@ -1,3 +1,7 @@
+-- Overriding defaults
+vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz<CR>", { noremap = true, silent = true, })
+vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz<CR>", { noremap = true, silent = true, })
+
 --[[
     Keyboard shortcut system
     <leader><v>erb<n>oun EX: new tab -> <leader>nt
@@ -33,6 +37,8 @@ vim.keymap.set('n', '<leader>fc', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 -- <f>ind in <h>elp
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+-- <f>ind <m>edia
+vim.keymap.set('n', '<leader>fm', ":Telescope media_files<CR>", {})
 -- <f>lao<t>erm
 vim.api.nvim_set_keymap('n', '<leader>ft', ':FloatermNew<CR>', { noremap = true, silent = true, })
 -- h
