@@ -45,6 +45,11 @@ require("indent_blankline").setup {
 -- Lualine
 require('lualine').setup { options = { icons_enabled = false } }
 
+
+-- netrw
+vim.g.netrw_localrmdir='rm -rf'
+
+
 -- vim-indent
 vim.g.indent_guides_enable_on_vim_startup = 1
 
@@ -58,6 +63,11 @@ telescope.setup {
         media_files = {
             filetypes = {"png", "jpg", "jpeg", "webm", "pdf"},
             find_cmd = "rg"
+        }
+    },
+    pickers = {
+        find_files = {
+            find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" }
         }
     }
 }
