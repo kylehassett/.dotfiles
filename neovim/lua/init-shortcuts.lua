@@ -1,6 +1,6 @@
 -- Overriding defaults
-vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz<CR>", { noremap = true, silent = true, })
-vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz<CR>", { noremap = true, silent = true, })
+vim.api.nvim_set_keymap("n", "<C-k>", "<C-u>zz<CR>", { noremap = true, silent = true, })
+vim.api.nvim_set_keymap("n", "<C-j>", "<C-d>zz<CR>", { noremap = true, silent = true, })
 
 --[[
     Keyboard shortcut system
