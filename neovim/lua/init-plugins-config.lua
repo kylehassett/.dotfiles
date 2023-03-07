@@ -55,10 +55,32 @@ vim.g.indent_guides_enable_on_vim_startup = 1
 
 
 -- telescope
-local telescope = require'telescope'
+local telescope = require"telescope"
 
-telescope.load_extension('media_files')
+telescope.load_extension("media_files")
 telescope.setup {
+    defaults = {
+        vimgrep_arguments = {
+            'rg',
+            '--color=never',
+            '--no-heading',
+            '--with-filename',
+            '--line-number',
+            '--column',
+            '--smart-case',
+            '--hidden',
+            '--no-ignore-vcs',
+            -- Due to the --no-ignore-vcs flag, need to add directories to ignore during ripgrep search...
+            "--glob",
+            "!**/.git/*",
+            "--glob",
+            "!**/.aws-sam/*",
+            "--glob",
+            "!**/.circleci/*",
+            "--glob",
+            "!**/venv/*"
+        },
+    },
     extensions = {
         media_files = {
             filetypes = {"png", "jpg", "jpeg", "webm", "pdf"},
