@@ -78,6 +78,8 @@ telescope.setup {
             "!**/.circleci/*",
             "--glob",
             "!**/node_modules/*",
+            "--glob",
+            "!**/venv/*",
         },
     },
     extensions = {
