@@ -69,16 +69,12 @@ telescope.setup {
             '--column',
             '--smart-case',
             '--hidden',
-            '--no-ignore-vcs',
-            -- Due to the --no-ignore-vcs flag, need to add directories to ignore during ripgrep search...
             "--glob",
-            "!**/.git/*",
+            ".editorconfig",
             "--glob",
-            "!**/.aws-sam/*",
+            ".env",
             "--glob",
-            "!**/.circleci/*",
-            "--glob",
-            "!**/venv/*"
+            ".env.*"
         },
     },
     extensions = {
