@@ -57,6 +57,19 @@ vim.g.indent_guides_enable_on_vim_startup = 1
 -- telescope
 local telescope = require"telescope"
 
+local grep_ignore_globs = {
+    "--glob",
+    "!**/.git/*",
+    "--glob",
+    "!**/.aws-sam/*",
+    "--glob",
+    "!**/.circleci/*",
+    "--glob",
+    "!**/node_modules/*",
+    "--glob",
+    "!**/venv/*"
+}
+
 telescope.load_extension("media_files")
 telescope.setup {
     defaults = {
@@ -70,16 +83,7 @@ telescope.setup {
             "--smart-case",
             "--hidden",
             "--no-ignore",
-            "--glob",
-            "!**/.git/*",
-            "--glob",
-            "!**/.aws-sam/*",
-            "--glob",
-            "!**/.circleci/*",
-            "--glob",
-            "!**/node_modules/*",
-            "--glob",
-            "!**/venv/*",
+            unpack(grep_ignore_globs)
         },
     },
     extensions = {
@@ -90,7 +94,7 @@ telescope.setup {
     },
     pickers = {
         find_files = {
-            find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" }
+            find_command = { "rg", "--files", "--hidden", "--no-ignore", unpack(grep_ignore_globs) }
         }
     }
 }
