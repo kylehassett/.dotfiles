@@ -10,6 +10,7 @@ editorconfig.editorconfig
 esbenp.prettier-vscode
 evondev.indent-rainbow-palettes
 formulahendry.auto-rename-tag
+GitHub.copilot
 GitHub.github-vscode-theme
 heybourn.headwind
 jock.svg
