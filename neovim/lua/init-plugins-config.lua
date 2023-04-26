@@ -4,6 +4,15 @@ require("auto-save").setup({
 })
 
 
+-- Copilot
+vim.api.nvim_set_keymap('i', '<S-Tab>', 'copilot#Accept("\\<CR>")', {
+    expr = true,
+    silent = true,
+    script = true
+})
+vim.g.copilot_no_tab_map = true
+
+
 -- FZF
 vim.env.FZF_DEFAULT_COMMAND = 'rg --files -g "!.git/" -g "!.github/" -g "!node_modules/" --hidden'
 

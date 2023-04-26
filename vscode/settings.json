@@ -99,7 +99,7 @@
   "terminal.integrated.tabs.title": "${cwdFolder}",
   "terminal.integrated.profiles.osx": {
     "fish": {
-      "path": "/usr/local/bin/fish", // overriding
+      "path": "/usr/local/bin/fish",
       "args": ["-l"]
     }
   },
@@ -116,5 +116,32 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "editor.inlineSuggest.enabled": true,
-  "editor.lineNumbers": "relative"
+  "editor.lineNumbers": "relative",
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-d>", "<Enter>", "z", "z", "<Enter>"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-u>", "<Enter>", "z", "z", "<Enter>"]
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.actions.quickOpen"],
+      "silent": true
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-d>", "<Enter>", "z", "z", "<Enter>"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-u>", "<Enter>", "z", "z", "<Enter>"]
+    }
+  ],
+  "vim.useCtrlKeys": true
 }
