@@ -1,11 +1,11 @@
 {
-  "breadcrumbs.enabled": true,
   "cSpell.language": "en",
   "cSpell.userWords": [
     "amiko",
     "appspot",
     "astro",
     "astrojs",
+    "boto",
     "clsx",
     "copyright",
     "daos",
@@ -25,15 +25,19 @@
     "keyframes",
     "Kyphotic",
     "logicals",
+    "mediavalet",
     "musiqu",
     "musique",
     "ohpin",
+    "rtype",
     "semibold",
     "sendgrid",
     "sessionmaker",
     "signup",
     "sqlalchemy",
     "sqlite",
+    "steg",
+    "stepfunctions",
     "strftime",
     "tailwindcss",
     "Tiktok",
@@ -89,10 +93,10 @@
   },
   "[python]": {
     "editor.tabSize": 4,
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.autopep8"
   },
   "editor.cursorSmoothCaretAnimation": "on",
-  "window.zoomLevel": -1,
   "vsicons.dontShowNewVersionMessage": true,
   "svelte.enable-ts-plugin": true,
   "terminal.integrated.tabs.description": "${task}",
@@ -108,7 +112,6 @@
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
   "database-client.highlightSQLBlock": true,
-  "editor.formatOnSave": true,
   "[svelte]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -143,5 +146,7 @@
       "after": ["<C-u>", "<Enter>", "z", "z", "<Enter>"]
     }
   ],
-  "vim.useCtrlKeys": true
+  "vim.useCtrlKeys": true,
+  "workbench.activityBar.visible": false,
+  "window.zoomLevel": -1
 }
