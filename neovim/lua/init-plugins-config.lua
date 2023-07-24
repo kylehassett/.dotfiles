@@ -76,7 +76,9 @@ local grep_ignore_globs = {
     "--glob",
     "!**/node_modules/*",
     "--glob",
-    "!**/venv/*"
+    "!**/venv/*",
+    "--glob",
+    "!**/.next/*"
 }
 
 telescope.load_extension("media_files")
@@ -197,6 +199,9 @@ require('lspsaga').setup()
 -- Treesitter
 require('nvim-treesitter.configs').setup {
     auto_install = true,
+    autotag = {
+        enable = true,
+    },
     ensure_installed = {
         'c',
         'css',
