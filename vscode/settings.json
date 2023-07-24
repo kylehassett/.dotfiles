@@ -152,6 +152,5 @@
     }
   ],
   "vim.useCtrlKeys": true,
-  "workbench.activityBar.visible": false,
-  "window.zoomLevel": 2
+  "workbench.activityBar.visible": false
 }
