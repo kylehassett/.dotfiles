@@ -28,7 +28,7 @@ vim.api.nvim_set_keymap("n", "<leader>cp", ":Lspsaga preview_definition<CR>", { 
 -- <c>ode <r>ename
 vim.api.nvim_set_keymap("n", "<leader>cr", ":Lspsaga rename<CR>", { noremap = true, silent = true, })
 -- <c>ode <u>sage
-vim.api.nvim_set_keymap('n', '<leader>cu', ':Lspsaga lsp_finder<CR>', { noremap = true, silent = true, })
+vim.api.nvim_set_keymap('n', '<leader>cu', ':Telescope lsp_references<CR>', { noremap = true, silent = true, })
 -- f
 local builtin = require'telescope.builtin'
 -- <f>ind in <b>uffer

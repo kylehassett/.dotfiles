@@ -13,6 +13,7 @@ formulahendry.auto-rename-tag
 GitHub.copilot
 GitHub.github-vscode-theme
 heybourn.headwind
+iciclesoft.workspacesort
 jock.svg
 magicstack.MagicPython
 mikey.vscode-fileheader

@@ -2,6 +2,7 @@
   "cSpell.language": "en",
   "cSpell.userWords": [
     "amiko",
+    "APIKEY",
     "appspot",
     "astro",
     "astrojs",
@@ -22,6 +23,7 @@
     "gealio",
     "hassett",
     "interactable",
+    "IPTC",
     "keyframes",
     "Kyphotic",
     "logicals",
@@ -34,6 +36,7 @@
     "sendgrid",
     "sessionmaker",
     "signup",
+    "SONOS",
     "sqlalchemy",
     "sqlite",
     "steg",
@@ -43,6 +46,8 @@
     "Tiktok",
     "truerev",
     "Unmount",
+    "userpool",
+    "userpools",
     "werkzeug"
   ],
   "editor.autoClosingBrackets": "never",
@@ -148,5 +153,5 @@
   ],
   "vim.useCtrlKeys": true,
   "workbench.activityBar.visible": false,
-  "window.zoomLevel": -1
+  "window.zoomLevel": 2
 }
