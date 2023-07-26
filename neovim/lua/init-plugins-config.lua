@@ -82,7 +82,9 @@ local grep_ignore_globs = {
     "--glob",
     "!**/venv/*",
     "--glob",
-    "!**/.next/*"
+    "!**/.next/*",
+    "--glob",
+    "!**/build/*"
 }
 
 telescope.load_extension("media_files")
