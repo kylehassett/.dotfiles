@@ -32,5 +32,6 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'RRethy/vim-illuminate'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'github/copilot.vim'
+Plug 'numToStr/Comment.nvim'
 
 call plug#end()

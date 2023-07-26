@@ -22,11 +22,15 @@ vim.api.nvim_set_keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { no
 vim.api.nvim_set_keymap('n', '<leader>ca', ':Lspsaga code_action<CR>', { noremap = true, silent = true, })
 vim.api.nvim_set_keymap("v", "<leader>ca", ":Lspsaga range_code_action<CR>", { noremap = true, silent = true, })
 -- <c>ode <d>oc
-vim.api.nvim_set_keymap("n", "<leader>cd", ":Lspsaga hover_doc<CR>", { silent = true, })
+vim.api.nvim_set_keymap("n", "<leader>cd", ":Lspsaga hover_doc<CR>", { noremap = true, silent = true, })
+-- <c>ode <i>mplementation
+vim.api.nvim_set_keymap("n", "<leader>ci", ":Telescope lsp_implementations<CR>", { noremap = true, silent = true, })
 -- <c>ode <p>review
-vim.api.nvim_set_keymap("n", "<leader>cp", ":Lspsaga preview_definition<CR>", { silent = true, })
+vim.api.nvim_set_keymap("n", "<leader>cp", ":Lspsaga preview_definition<CR>", { noremap = true, silent = true, })
 -- <c>ode <r>ename
-vim.api.nvim_set_keymap("n", "<leader>cr", ":Lspsaga rename<CR>", { noremap = true, silent = true, })
+vim.api.nvim_set_keymap("n", "<leader>cr", ":Lspsaga rename ++project<CR>", { noremap = true, silent = true, })
+-- <c>ode <t>ype
+vim.api.nvim_set_keymap("n", "<leader>ct", ":Telescope lsp_type_definitions<CR>", { noremap = true, silent = true, })
 -- <c>ode <u>sage
 vim.api.nvim_set_keymap('n', '<leader>cu', ':Telescope lsp_references<CR>', { noremap = true, silent = true, })
 -- f

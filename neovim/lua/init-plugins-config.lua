@@ -4,6 +4,10 @@ require("auto-save").setup({
 })
 
 
+-- Comment.nvim
+require('Comment').setup()
+
+
 -- Copilot
 vim.api.nvim_set_keymap('i', '<S-Tab>', 'copilot#Accept("\\<CR>")', {
     expr = true,
