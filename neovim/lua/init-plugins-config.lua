@@ -116,6 +116,8 @@ telescope.setup {
             "--smart-case",
             "--hidden",
             "--no-ignore",
+            "--sort",
+            "path",
             unpack(grep_ignore_globs)
         },
     },
@@ -127,7 +129,7 @@ telescope.setup {
     },
     pickers = {
         find_files = {
-            find_command = { "rg", "--files", "--hidden", "--no-ignore", unpack(grep_ignore_globs) }
+            find_command = { "rg", "--files", "--hidden", "--no-ignore", "--sort", "path", unpack(grep_ignore_globs) }
         }
     }
 }
