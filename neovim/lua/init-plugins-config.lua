@@ -100,7 +100,9 @@ local grep_ignore_globs = {
     "--glob",
     "!**/__pycache__/*",
     "--glob",
-    "!**/.pytest_cache/*"
+    "!**/.pytest_cache/*",
+    "--glob",
+    "!**/.eslintcache"
 }
 
 telescope.load_extension("media_files")
