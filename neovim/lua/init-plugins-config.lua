@@ -102,12 +102,24 @@ local grep_ignore_globs = {
     "--glob",
     "!**/.pytest_cache/*",
     "--glob",
-    "!**/.eslintcache"
+    "!**/.eslintcache",
+    "--glob",
+    "!**/.DS_Store",
 }
 
 telescope.load_extension("media_files")
 telescope.setup {
     defaults = {
+        layout_strategy = "vertical",
+        layout_config = {
+            vertical = {
+                height = 0.95,
+                mirror = true,
+                preview_height = 0.5,
+                prompt_position = "bottom",
+                width = 0.95,
+            },
+        },
         vimgrep_arguments = {
             "rg",
             "--color=never",
@@ -131,7 +143,7 @@ telescope.setup {
     },
     pickers = {
         find_files = {
-            find_command = { "rg", "--files", "--hidden", "--no-ignore", "--sort", "path", unpack(grep_ignore_globs) }
+            find_command = { "rg", "--files", "--hidden", "--no-ignore", "--sort", "path", unpack(grep_ignore_globs) },
         }
     }
 }
