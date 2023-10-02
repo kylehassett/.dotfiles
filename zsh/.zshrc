@@ -20,7 +20,7 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # Path changes
-export PATH=$PATH:/Users/kylehassett/go/bin
+export PATH=$PATH:/Users/kylehassett/go/bin:/Users/kylehassett/.cargo/bin
 
 
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn

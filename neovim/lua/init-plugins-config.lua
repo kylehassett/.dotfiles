@@ -24,47 +24,10 @@ vim.env.FZF_DEFAULT_COMMAND = 'rg --files -g "!.git/" -g "!.github/" -g "!node_m
 -- Indent blankline
 vim.opt.listchars:append "eol:↴"
 
-vim.cmd [[highlight IndentBlanklineIndent1 guibg=#36384a gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent2 guibg=#404459 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent3 guibg=#4b4f68 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent4 guibg=#565a76 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent5 guibg=#606585 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent6 guibg=#6b7194 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent7 guibg=#7a7f9f gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent8 guibg=#898da9 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent9 guibg=#979bb4 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent10 guibg=#a6aabf gui=nocombine]]
-
-require("indent_blankline").setup {
-    char = "",
-    char_highlight_list = {
-        "IndentBlanklineIndent1",
-        "IndentBlanklineIndent2",
-        "IndentBlanklineIndent3",
-        "IndentBlanklineIndent4",
-        "IndentBlanklineIndent5",
-        "IndentBlanklineIndent6",
-        "IndentBlanklineIndent7",
-        "IndentBlanklineIndent8",
-        "IndentBlanklineIndent9",
-        "IndentBlanklineIndent10",
+require("ibl").setup {
+    whitespace = {
+        highlight = { "CursorColumn", "Whitespace", }
     },
-    space_char_highlight_list = {
-        "IndentBlanklineIndent1",
-        "IndentBlanklineIndent2",
-        "IndentBlanklineIndent3",
-        "IndentBlanklineIndent4",
-        "IndentBlanklineIndent5",
-        "IndentBlanklineIndent6",
-        "IndentBlanklineIndent7",
-        "IndentBlanklineIndent8",
-        "IndentBlanklineIndent9",
-        "IndentBlanklineIndent10",
-    },
-    show_current_context = true,
-    show_current_context_start = true,
-    show_end_of_line = true,
-    show_trailing_blankline_indent = false,
 }
 
 -- Lualine
