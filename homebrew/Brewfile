@@ -12,8 +12,9 @@ tap 'heroku/brew'
 
 ## General
 brew 'awscli'
-brew 'aws-sam-cli'
+# brew 'aws-sam-cli'  # Upgrade to 1.98.0 caused issues, new set of commands which breaks Steg.AI deployment script.
 brew 'direnv'
+brew 'dive' # Docker image explorer
 brew 'ffmpeg'
 brew 'fzf'
 brew 'go'
