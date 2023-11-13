@@ -194,8 +194,22 @@ lsp_config.tsserver.setup { capabilities = capabilites }
 lsp_config.terraformls.setup { capabilities = capabilites }
 lsp_config.yamlls.setup { capabilities = capabilites }
 
+local foo = "foo"
+
+foo = "bar"
+
 -- lspsaga
-require('lspsaga').setup()
+require('lspsaga').setup({
+    code_action_keys = {
+        quit = "<ESC>",
+    },
+    finder_action_keys = {
+        quit = "<ESC>",
+    },
+    rename_action_keys = {
+        quit = "<ESC>",
+    },
+})
 
 -- Treesitter
 require('nvim-treesitter.configs').setup {

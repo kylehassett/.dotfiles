@@ -11,24 +11,30 @@ vim.api.nvim_set_keymap("v", "<C-j>", "<C-d>zz<CR>", { noremap = true, silent = 
     Use capital letters for verb if there are multiple semantically useful words for the short cuts.
 --]]
 
--- [
--- Jump <[> to <e>rror
-vim.api.nvim_set_keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { noremap = true, silent = true, })
--- ]
--- Jump <]> from <e>rror
-vim.api.nvim_set_keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { noremap = true, silent = true, })
 -- c
 -- <c>ode <a>ction
 vim.api.nvim_set_keymap('n', '<leader>ca', ':Lspsaga code_action<CR>', { noremap = true, silent = true, })
 vim.api.nvim_set_keymap("v", "<leader>ca", ":Lspsaga range_code_action<CR>", { noremap = true, silent = true, })
--- <c>ode <d>oc
-vim.api.nvim_set_keymap("n", "<leader>cd", ":Lspsaga hover_doc<CR>", { noremap = true, silent = true, })
+-- <c>ode preview <d>efinition
+vim.api.nvim_set_keymap("n", "<leader>cd", ":Lspsaga preview_definition<CR>", { noremap = true, silent = true, })
+-- <c>ode diagnostic
+    -- <c>ursor
+    vim.api.nvim_set_keymap('n', '<leader>cc', ':Lspsaga show_cursor_diagnostics<CR>', { noremap = true, silent = true, })
+    -- <l>ine
+    vim.api.nvim_set_keymap('n', '<leader>cl', ':Lspsaga show_line_diagnostics<CR>', { noremap = true, silent = true, })
+    -- scrolling
+    -- up
+    vim.api.nvim_set_keymap("n", "<F3>", "lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", { noremap = true, silent = true, })
+    -- down
+    vim.api.nvim_set_keymap("n", "<F2>", "lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", { noremap = true, silent = true, })
+-- <c>ode <h>over doc
+vim.api.nvim_set_keymap("n", "<leader>ch", ":Lspsaga hover_doc<CR>", { noremap = true, silent = true, })
 -- <c>ode <i>mplementation
 vim.api.nvim_set_keymap("n", "<leader>ci", ":Telescope lsp_implementations<CR>", { noremap = true, silent = true, })
--- <c>ode <p>review
-vim.api.nvim_set_keymap("n", "<leader>cp", ":Lspsaga preview_definition<CR>", { noremap = true, silent = true, })
 -- <c>ode <r>ename
 vim.api.nvim_set_keymap("n", "<leader>cr", ":Lspsaga rename ++project<CR>", { noremap = true, silent = true, })
+-- <c>ode <s>ignature help
+vim.api.nvim_set_keymap("n", "<leader>cs", ":Lspsaga signature_help<CR>", { noremap = true, silent = true, })
 -- <c>ode <t>ype
 vim.api.nvim_set_keymap("n", "<leader>ct", ":Telescope lsp_type_definitions<CR>", { noremap = true, silent = true, })
 -- <c>ode <u>sage
