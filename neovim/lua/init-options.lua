@@ -23,6 +23,7 @@ vim.wo.numberwidth = 6
 vim.wo.relativenumber = true
 vim.o.ruler = true
 vim.o.scrolloff = 10
+vim.o.sidescrolloff = 30
 vim.bo.shiftwidth = 4
 vim.o.showmatch = true
 vim.o.showtabline = 2

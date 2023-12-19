@@ -1,4 +1,5 @@
 -- Overriding defaults
+-- Vertical Scrolling
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-u>zz<CR>", { noremap = true, silent = true, })
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-d>zz<CR>", { noremap = true, silent = true, })
 vim.api.nvim_set_keymap("v", "<C-k>", "<C-u>zz<CR>", { noremap = true, silent = true, })

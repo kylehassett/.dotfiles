@@ -34,6 +34,10 @@ require("ibl").setup {
 require('lualine').setup { options = { icons_enabled = false } }
 
 
+-- matchtags
+vim.g.vim_matchtag_files = '*.astro,*.html,*.jsx,*.svelte,*.tsx,*.vue,*.xml'
+
+
 -- netrw
 vim.g.netrw_localrmdir='rm -rf'
 
@@ -117,6 +121,7 @@ require("mason").setup()
 require("mason-lspconfig").setup({ ensure_installed = {
     'angularls',
     'astro',
+    'bashls',
     'clangd',
     'cssls',
     'dockerls',
@@ -156,6 +161,12 @@ cmp.setup({
         {
             { name = 'nvim_lsp' },
             { name = 'vsnip' },
+            {
+                name = 'emmet_vim',
+                option = {
+                    filetypes = { 'astro', 'html', 'xml', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'heex', 'tsx', 'jsx' }
+                }
+            },
         },
         {
             { name = 'buffer' }
@@ -169,34 +180,32 @@ cmp.setup({
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local lsp_config = require'lspconfig'
-lsp_config.astro.setup { capabilities = capabilites }
-lsp_config.angularls.setup { capabilities = capabilites }
-lsp_config.clangd.setup { capabilities = capabilites }
-lsp_config.ccls.setup { capabilities = capabilites }
-lsp_config.cssls.setup { capabilities = capabilites }
-lsp_config.dockerls.setup { capabilities = capabilites }
+lsp_config.astro.setup { capabilities = capabilities }
+lsp_config.angularls.setup { capabilities = capabilities }
+lsp_config.bashls.setup { capabilities = capabilities }
+lsp_config.clangd.setup { capabilities = capabilities }
+lsp_config.ccls.setup { capabilities = capabilities }
+lsp_config.cssls.setup { capabilities = capabilities }
+lsp_config.dockerls.setup { capabilities = capabilities }
 lsp_config.emmet_ls.setup({
-    capabilities = capabilites,
+    capabilities = capabilities,
     filetypes = { "astro", "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", 'svelte',  }
 })
-lsp_config.eslint.setup { capabilities = capabilites }
-lsp_config.html.setup { capabilities = capabilites }
-lsp_config.jdtls.setup { capabilities = capabilites }
-lsp_config.jsonls.setup { capabilities = capabilites }
-lsp_config.lua_ls.setup { capabilities = capabilites }
-lsp_config.marksman.setup { capabilities = capabilites }
-lsp_config.prismals.setup { capabilities = capabilites }
-lsp_config.pyright.setup { capabilities = capabilites }
-lsp_config.sqlls.setup { capabilities = capabilites }
-lsp_config.svelte.setup { capabilities = capabilites }
-lsp_config.tailwindcss.setup { capabilities = capabilites }
-lsp_config.tsserver.setup { capabilities = capabilites }
-lsp_config.terraformls.setup { capabilities = capabilites }
-lsp_config.yamlls.setup { capabilities = capabilites }
+lsp_config.eslint.setup { capabilities = capabilities }
+lsp_config.html.setup { capabilities = capabilities }
+lsp_config.jdtls.setup { capabilities = capabilities }
+lsp_config.jsonls.setup { capabilities = capabilities }
+lsp_config.lua_ls.setup { capabilities = capabilities }
+lsp_config.marksman.setup { capabilities = capabilities }
+lsp_config.prismals.setup { capabilities = capabilities }
+lsp_config.pyright.setup { capabilities = capabilities }
+lsp_config.sqlls.setup { capabilities = capabilities }
+lsp_config.svelte.setup { capabilities = capabilities }
+lsp_config.tailwindcss.setup { capabilities = capabilities }
+lsp_config.tsserver.setup { capabilities = capabilities }
+lsp_config.terraformls.setup { capabilities = capabilities }
+lsp_config.yamlls.setup { capabilities = capabilities }
 
-local foo = "foo"
-
-foo = "bar"
 
 -- lspsaga
 require('lspsaga').setup({
@@ -211,6 +220,7 @@ require('lspsaga').setup({
     },
 })
 
+
 -- Treesitter
 require('nvim-treesitter.configs').setup {
     auto_install = true,
@@ -218,6 +228,7 @@ require('nvim-treesitter.configs').setup {
         enable = true,
     },
     ensure_installed = {
+        'bash',
         'c',
         'css',
         'lua',
