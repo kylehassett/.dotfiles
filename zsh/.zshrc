@@ -3,7 +3,7 @@ alias cl="clear && printf '\e[3J'"
 alias ff="rg --files --hidden -g "!.git/" -g "!.github/" | fzf-tmux -p --reverse | xargs nvim"
 alias ls="/bin/ls -G"
 alias la="ls -Fla"
-alias nvid="neovide --multigrid --nofork $argv"
+alias nvid="neovide $argv --no-multigrid --no-fork"
 
 export EDITOR="nvim"
 export PS1="%1~ $ "
