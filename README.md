@@ -1,3 +1,8 @@
+|[![Static image ad from gitcomp.com](https://gitcomp.com/kylehassett/.dotfiles)](https://gitcomp.com/kylehassett/.dotfiles)|
+|---:|
+|<sub>Interested? Click the ad or [here](https://gitcomp.com/kylehassett/.dotfiles). Powered by [GitComp](https://gitcomp.com).</sub>|
+|<sub><sub>_Seeing this outside of a repo's README? [Let us know.](https://gitcomp.com/report/kylehassett/.dotfiles)_</sub></sub>|
+
 |[![Static image ad from gitcomp.com](https://gitcomp.com/ad/kylehassett/.dotfiles)](https://gitcomp.com/ad/kylehassett/.dotfiles)|
 |---:|
 |<sub>Interested? Click the ad or [here](https://gitcomp.com/ad/kylehassett/.dotfiles). Powered by [GitComp](https://gitcomp.com).</sub>|
