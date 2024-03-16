@@ -16,13 +16,11 @@ vim.api.nvim_set_keymap("v", "<C-j>", "<C-d>zz<CR>", { noremap = true, silent = 
 -- <c>ode <a>ction
 vim.api.nvim_set_keymap('n', '<leader>ca', ':Lspsaga code_action<CR>', { noremap = true, silent = true, })
 vim.api.nvim_set_keymap("v", "<leader>ca", ":Lspsaga range_code_action<CR>", { noremap = true, silent = true, })
--- <c>ode preview <d>efinition
-vim.api.nvim_set_keymap("n", "<leader>cd", ":Lspsaga preview_definition<CR>", { noremap = true, silent = true, })
 -- <c>ode diagnostic
     -- <c>ursor
-    vim.api.nvim_set_keymap('n', '<leader>cc', ':Lspsaga show_cursor_diagnostics<CR>', { noremap = true, silent = true, })
+    vim.api.nvim_set_keymap('n', '<leader>cdc', ':Lspsaga show_cursor_diagnostics<CR>', { noremap = true, silent = true, })
     -- <l>ine
-    vim.api.nvim_set_keymap('n', '<leader>cl', ':Lspsaga show_line_diagnostics<CR>', { noremap = true, silent = true, })
+    vim.api.nvim_set_keymap('n', '<leader>cdl', ':Lspsaga show_line_diagnostics<CR>', { noremap = true, silent = true, })
     -- scrolling
     -- up
     vim.api.nvim_set_keymap("n", "<F3>", "lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", { noremap = true, silent = true, })
@@ -32,6 +30,8 @@ vim.api.nvim_set_keymap("n", "<leader>cd", ":Lspsaga preview_definition<CR>", { 
 vim.api.nvim_set_keymap("n", "<leader>ch", ":Lspsaga hover_doc<CR>", { noremap = true, silent = true, })
 -- <c>ode <i>mplementation
 vim.api.nvim_set_keymap("n", "<leader>ci", ":Telescope lsp_implementations<CR>", { noremap = true, silent = true, })
+-- <c>ode <p>review definition
+vim.api.nvim_set_keymap("n", "<leader>cp", ":Lspsaga preview_definition<CR>", { noremap = true, silent = true, })
 -- <c>ode <r>ename
 vim.api.nvim_set_keymap("n", "<leader>cr", ":Lspsaga rename ++project<CR>", { noremap = true, silent = true, })
 -- <c>ode <s>ignature help
@@ -53,7 +53,15 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 -- <f>ind <m>edia
 vim.keymap.set('n', '<leader>fm', ":Telescope media_files<CR>", {})
 -- <f>lao<t>erm
-vim.api.nvim_set_keymap('n', '<leader>ft', ':FloatermNew<CR>', { noremap = true, silent = true, })
+    -- open
+    vim.api.nvim_set_keymap('n', '<leader>ft', ':Lspsaga open_floaterm<CR>', { noremap = true, silent = true, })
+
+    -- function ClearFloaterm()
+    --     vim.api.nvim_command('<>')
+    -- end
+
+    -- close
+    vim.api.nvim_set_keymap('t', '<D-d>', "<C-\\><C-n>:Lspsaga close_floaterm<CR>", { noremap = true, silent = true, })
 -- h
 -- left movement for tabs
 vim.api.nvim_set_keymap('n', '<leader>ht', ':tabprevious<CR>', { noremap = true, silent = true, })
@@ -61,7 +69,7 @@ vim.api.nvim_set_keymap('n', '<leader>ht', ':tabprevious<CR>', { noremap = true,
 vim.api.nvim_set_keymap('n', '<leader>hh', ':noh<CR>', { noremap = true, silent = true, })
 -- l
 -- <l>azy<g>it
-vim.api.nvim_set_keymap('n', '<leader>lg', ':FloatermNew lazygit<CR>', { noremap = true, silent = true, })
+vim.api.nvim_set_keymap('n', '<leader>lg', ":lua require('lspsaga.floaterm').open_float_terminal()<CR>", { noremap = true, silent = true, })
 -- right movement for tabs
 vim.api.nvim_set_keymap('n', '<leader>lt', ':tabnext<CR>', { noremap = true, silent = true, })
 -- o

@@ -6,7 +6,7 @@ Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'voldikss/vim-floaterm'
+" Plug 'voldikss/vim-floaterm'
 Plug 'kkharji/lspsaga.nvim', { 'branch': 'main' }
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
