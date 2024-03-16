@@ -57,6 +57,8 @@ local grep_ignore_globs = {
     "--glob",
     "!**/.circleci/*",
     "--glob",
+    "!**/dist/*",
+    "--glob",
     "!**/node_modules/*",
     "--glob",
     "!**/venv/*",
