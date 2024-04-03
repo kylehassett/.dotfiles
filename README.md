@@ -28,6 +28,8 @@ cd .dotfiles
 ./bootstrap.sh
 ```
 
+[![Ad from GitComp.com for github.com/kylehassett/.dotfiles](https://gitcomp.com/ad/kylehassett/.dotfiles)](https://gitcomp.com/ad/kylehassett/.dotfiles)
+
 ## Feedback
 
 Not sure if anyone will care to do give any feedback since dotfiles are a dime a dozen, but feel free to leave any advice or feedback you have.
