@@ -1,4 +1,4 @@
-[![Ad from GitComp.com for github.com/kylehassett/.dotfiles](https://gitcomp.com/ad/kylehassett/.dotfiles)](https://gitcomp.com/ad/kylehassett/.dotfiles)
+[![](https://gitcomp.com/ad/kylehassett/.dotfiles)](https://gitcomp.com/ad/kylehassett/.dotfiles)
 
 # dotfiles
 
