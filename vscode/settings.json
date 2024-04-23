@@ -152,5 +152,5 @@
     }
   ],
   "vim.useCtrlKeys": true,
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.location": "hidden"
 }

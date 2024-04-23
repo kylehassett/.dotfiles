@@ -21,6 +21,7 @@ brew 'ffmpeg'
 brew 'fzf'
 brew 'go'
 brew 'heroku'
+brew 'jq'
 brew 'neovim', args: ["HEAD"]
 brew 'node'
 brew 'postgresql'
