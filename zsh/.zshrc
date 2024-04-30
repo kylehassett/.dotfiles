@@ -4,6 +4,8 @@ alias ff="rg --files --hidden -g "!.git/" -g "!.github/" | fzf-tmux -p --reverse
 alias ls="/bin/ls -G"
 alias ll="ls -Fla"
 alias nvid="neovide $argv --no-multigrid --no-fork"
+alias resource="source ~/.zshrc"
+alias pysource="source venv/bin/activate"
 
 export EDITOR="nvim"
 export PS1="%1~ $ "
