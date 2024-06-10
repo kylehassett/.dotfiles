@@ -3,7 +3,7 @@ alias cl="clear && printf '\e[3J'"
 alias ff="rg --files --hidden -g "!.git/" -g "!.github/" | fzf-tmux -p --reverse | xargs nvim"
 alias ls="/bin/ls -G"
 alias ll="ls -Fla"
-alias nvid="neovide $argv --no-multigrid --no-fork"
+alias nvid="neovide $argv --no-fork"
 alias resource="source ~/.zshrc"
 alias pysource="source venv/bin/activate"
 
