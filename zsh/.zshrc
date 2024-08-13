@@ -11,6 +11,8 @@ export EDITOR="nvim"
 export PS1="%1~ $ "
 export VISUAL="nvim"
 
+# FZF
+source <(fzf --zsh)
 
 # Google cloud
 # if [ -f '/Users/kylehassett/Development/google-cloud-sdk/path.fish.inc' ]; . '/Users/kylehassett/Development/google-cloud-sdk/path.fish.inc'; end
