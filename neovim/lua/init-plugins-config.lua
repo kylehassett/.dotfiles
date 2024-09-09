@@ -140,7 +140,7 @@ require("mason-lspconfig").setup({ ensure_installed = {
     'svelte',
     'tailwindcss',
     'terraformls',
-    'tsserver',
+    'ts_ls',
     'yamlls',
 } })
 
@@ -204,7 +204,7 @@ lsp_config.pyright.setup { capabilities = capabilities }
 lsp_config.sqlls.setup { capabilities = capabilities }
 lsp_config.svelte.setup { capabilities = capabilities }
 lsp_config.tailwindcss.setup { capabilities = capabilities }
-lsp_config.tsserver.setup { capabilities = capabilities }
+lsp_config.ts_ls.setup { capabilities = capabilities }
 lsp_config.terraformls.setup { capabilities = capabilities }
 lsp_config.yamlls.setup { capabilities = capabilities }
 
