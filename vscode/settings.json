@@ -125,7 +125,10 @@
   },
   "editor.inlineSuggest.enabled": true,
   "editor.lineNumbers": "relative",
-  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-f>": false
+  },
+  "vim.leader": " ",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<C-j>"],
@@ -137,8 +140,11 @@
     },
     {
       "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.actions.quickOpen"],
-      "silent": true
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "f", "p"],
+      "commands": ["workbench.action.showCommands"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [

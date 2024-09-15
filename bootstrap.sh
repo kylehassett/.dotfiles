@@ -10,6 +10,7 @@ echo "Working with each program's dotfile now..."
 /bin/zsh ./git/git-install.sh
 /bin/zsh ./zsh/zsh-install.sh
 /bin/zsh ./vscode/vscode-install.sh
+/bin/zsh ./cursor/cursor-install.sh
 /bin/zsh ./neovim/neovim-install.sh
 /bin/zsh ./neovide/neovide-install.sh
 
