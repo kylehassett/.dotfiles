@@ -143,8 +143,8 @@
       "commands": ["workbench.action.quickOpen"]
     },
     {
-      "before": ["<leader>", "f", "p"],
-      "commands": ["workbench.action.showCommands"]
+      "before": ["<leader>", "f", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
