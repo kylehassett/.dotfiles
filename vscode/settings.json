@@ -50,6 +50,9 @@
     "userpools",
     "werkzeug"
   ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
   "editor.autoClosingBrackets": "never",
   "editor.dragAndDrop": false,
   "editor.fontFamily": "JetBrains Mono",
@@ -62,13 +65,20 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "fileheader.Author": "Kyle R Hassett",
   "fileheader.LastModifiedBy": "Kyle R Hassett",
   "fileheader.tpl": "/*\r\n * @Author: {author} \r\n * @Date: {createTime} \r\n * @Last Modified by:   {lastModifiedBy} \r\n * @Last Modified time: {updateTime} \r\n * @Copyright: 2018 Kyle R Hassett \r\n */\r\n",
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.exclude": {
-    "**/.git": false
+    "**/.git": true,
+    "**/.DS_Store": true
   },
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
@@ -93,11 +103,7 @@
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   "workbench.iconTheme": "vscode-icons",
-  "[javascript]": {
-    "editor.tabSize": 4
-  },
   "[python]": {
-    "editor.tabSize": 4,
     "editor.formatOnType": true,
     "editor.defaultFormatter": "ms-python.autopep8"
   },
@@ -125,6 +131,10 @@
   },
   "editor.inlineSuggest.enabled": true,
   "editor.lineNumbers": "relative",
+  "search.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true
+  },
   "vim.handleKeys": {
     "<C-f>": false
   },

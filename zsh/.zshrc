@@ -23,6 +23,28 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+# Check for .nvmrc file and use specified Node version
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
+      nvm use
+    fi
+  elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+
 # Path changes
 export PATH=$PATH:/Users/kylehassett/go/bin:/Users/kylehassett/.cargo/bin
 
@@ -32,4 +54,3 @@ export PATH=$PATH:/Users/kylehassett/go/bin:/Users/kylehassett/.cargo/bin
 
 # Hook into direnv KEEP AT THE END OF THE FILE
 eval "$(direnv hook zsh)"
-

@@ -25,7 +25,7 @@
   },
   {
     "key": "shift+cmd+t",
-    "command": "workbench.action.terminal.toggleTerminal",
+    "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   }
 ]
