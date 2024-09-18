@@ -77,6 +77,7 @@
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.exclude": {
+    "**/.env*": false,
     "**/.git": true,
     "**/.DS_Store": true
   },
@@ -133,7 +134,8 @@
   "editor.lineNumbers": "relative",
   "search.exclude": {
     "**/.git": true,
-    "**/.DS_Store": true
+    "**/.DS_Store": true,
+    "**/.env*": false
   },
   "vim.handleKeys": {
     "<C-f>": false
