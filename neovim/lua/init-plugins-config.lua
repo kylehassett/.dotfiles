@@ -1,6 +1,7 @@
 -- Autosave
 require("auto-save").setup({
-    events = {"BufLeave", "BufWinLeave", "TabLeave", "WinLeave"},
+    events = {"InsertLeave", "TextChanged"},
+    debounce_delay = 500,
 })
 
 
