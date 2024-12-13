@@ -62,6 +62,8 @@ vim.keymap.set('n', '<leader>fm', ":Telescope media_files<CR>", {})
 
     -- close
     vim.api.nvim_set_keymap('t', '<D-d>', "<C-\\><C-n>:Lspsaga close_floaterm<CR>", { noremap = true, silent = true, })
+-- g
+vim.api.nvim_set_keymap('n', '<leader>gb', ':GitBlameToggle<CR>', { noremap = true, silent = true, })
 -- h
 -- left movement for tabs
 vim.api.nvim_set_keymap('n', '<leader>ht', ':tabprevious<CR>', { noremap = true, silent = true, })

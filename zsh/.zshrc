@@ -7,6 +7,7 @@ alias nvid="neovide $argv --no-fork"
 alias resource="source ~/.zshrc"
 alias pysource="source venv/bin/activate"
 
+export CGO_ENABLED=0
 export EDITOR="nvim"
 export PS1="%1~ $ "
 export VISUAL="nvim"

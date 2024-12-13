@@ -37,5 +37,6 @@ Plug 'RRethy/vim-illuminate'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'github/copilot.vim'
 Plug 'numToStr/Comment.nvim'
+Plug 'f-person/git-blame.nvim'
 
 call plug#end()

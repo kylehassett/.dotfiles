@@ -170,5 +170,6 @@
     }
   ],
   "vim.useCtrlKeys": true,
-  "github.copilot.editor.enableAutoCompletions": true
+  "github.copilot.editor.enableAutoCompletions": true,
+  "workbench.startupEditor": "none"
 }

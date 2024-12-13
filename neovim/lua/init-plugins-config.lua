@@ -22,6 +22,12 @@ vim.g.copilot_no_tab_map = true
 vim.env.FZF_DEFAULT_COMMAND = 'rg --files -g "!.git/" -g "!.github/" -g "!node_modules/" --hidden'
 
 
+-- Git Blame
+require('gitblame').setup {
+    enabled = false,  -- Start with git blame disabled so it's not distracting
+}
+
+
 -- Indent blankline
 vim.opt.listchars:append "eol:↴"
 
