@@ -81,6 +81,8 @@ local grep_ignore_globs = {
     "!**/.eslintcache",
     "--glob",
     "!**/.DS_Store",
+    "--glob",
+    "!**/python/*",
 }
 
 telescope.load_extension("media_files")

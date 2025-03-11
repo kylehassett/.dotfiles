@@ -31,7 +31,8 @@ vim.api.nvim_set_keymap("n", "<leader>ch", ":Lspsaga hover_doc<CR>", { noremap =
 -- <c>ode <i>mplementation
 vim.api.nvim_set_keymap("n", "<leader>ci", ":Telescope lsp_implementations<CR>", { noremap = true, silent = true, })
 -- <c>ode <p>review definition
-vim.api.nvim_set_keymap("n", "<leader>cp", ":Lspsaga preview_definition<CR>", { noremap = true, silent = true, })
+-- vim.api.nvim_set_keymap("n", "<leader>cp", ":Lspsaga preview_definition<CR>", { noremap = true, silent = true, })
+vim.api.nvim_set_keymap("n", "<leader>cp", ":Copilot panel<CR>", { noremap = true, silent = true, })
 -- <c>ode <r>ename
 vim.api.nvim_set_keymap("n", "<leader>cr", ":Lspsaga rename ++project<CR>", { noremap = true, silent = true, })
 -- <c>ode <s>ignature help

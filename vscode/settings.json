@@ -84,6 +84,7 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
+  "git.detectSubmodules": false,
   "indentRainbow.colors": [
     "rgba(24, 78, 119,0.15)",
     "rgba(30, 96, 145,0.15)",
@@ -119,7 +120,7 @@
       "args": ["-l"]
     }
   },
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Dracula Theme",
   "zenMode.fullScreen": false,
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
@@ -171,5 +172,6 @@
   ],
   "vim.useCtrlKeys": true,
   "github.copilot.editor.enableAutoCompletions": true,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "redhat.telemetry.enabled": false
 }
