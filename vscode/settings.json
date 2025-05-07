@@ -55,7 +55,7 @@
   },
   "editor.autoClosingBrackets": "never",
   "editor.dragAndDrop": false,
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
   "editor.minimap.enabled": false,
@@ -173,5 +173,6 @@
   "vim.useCtrlKeys": true,
   "github.copilot.editor.enableAutoCompletions": true,
   "workbench.startupEditor": "none",
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "debug.toolBarLocation": "commandCenter"
 }

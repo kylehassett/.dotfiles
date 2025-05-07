@@ -26,6 +26,8 @@ vim.api.nvim_set_keymap("v", "<leader>ca", ":Lspsaga range_code_action<CR>", { n
     vim.api.nvim_set_keymap("n", "<F3>", "lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", { noremap = true, silent = true, })
     -- down
     vim.api.nvim_set_keymap("n", "<F2>", "lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", { noremap = true, silent = true, })
+-- <c>ode <g>generate
+vim.api.nvim_set_keymap("n", "<leader>cg", "lua require('copilot.suggestion').next()<CR>", { noremap = true, silent = true, })
 -- <c>ode <h>over doc
 vim.api.nvim_set_keymap("n", "<leader>ch", ":Lspsaga hover_doc<CR>", { noremap = true, silent = true, })
 -- <c>ode <i>mplementation

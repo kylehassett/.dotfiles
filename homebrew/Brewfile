@@ -1,5 +1,4 @@
 # Setup taps
-
 tap 'homebrew/core'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
@@ -8,43 +7,40 @@ tap 'homebrew/cask-versions'
 tap 'aws/tap'
 tap 'heroku/brew'
 
-# Formulae (In logical groups)
-
-## General
+# Formulae
 brew 'awscli'
 brew 'awsebcli'
 brew 'aws-sam-cli'  # Upgrade to 1.98.0 caused issues, new set of commands which breaks Steg.AI deployment script.
+brew 'cmake'
 brew 'direnv'
 brew 'dive' # Docker image explorer
 brew 'dvc'
+brew 'fd'
 brew 'ffmpeg'
 brew 'fzf'
+brew 'gcc'
 brew 'go'
 brew 'heroku'
 brew 'jq'
+brew 'lua-language-server'
+brew 'luarocks'
 brew 'neovim', args: ["HEAD"]
 brew 'node'
-brew 'postgresql'
+brew 'pngpaste'
 brew 'pnpm'
+brew 'postgresql'
 brew 'python'
 brew 'pytorch'
+brew 'ripgrep'
+brew 'rust'
+brew 'rustup-init'
 brew 'scipy'
 brew 'stow'
 brew 'terraform'
-brew 'vim'
-brew 'yarn'
-
-## Neovim extension dependencies
-brew 'gcc'
-brew 'lua-language-server'
-brew 'ripgrep'
 brew 'the_silver_searcher'
-
-## rust/ Neovide dependencies
-brew 'rust'
-brew 'rustup-init'
-brew 'cmake'
-
+brew 'vim'
+brew 'wget'
+brew 'yarn'
 
 # Casks
 cask 'adobe-creative-cloud'
@@ -60,7 +56,7 @@ cask 'docker'
 cask 'figma'
 cask 'flux'
 cask 'font-fira-code'
-cask 'font-jetbrains-mono'
+cask 'font-jetbrains-mono-nerd-font'
 cask 'google-chrome'
 cask 'google-cloud-sdk'
 cask 'google-drive'

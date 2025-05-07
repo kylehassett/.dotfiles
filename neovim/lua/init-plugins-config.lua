@@ -5,19 +5,33 @@ require("auto-save").setup({
 })
 
 
+-- Avante
+require('avante').setup({
+    provider = "openai"
+})
+
+
 -- Comment.nvim
 require('Comment').setup()
 
 
 -- Copilot
-vim.api.nvim_set_keymap('i', '<S-Tab>', 'copilot#Accept("\\<CR>")', {
-    expr = true,
-    silent = true,
-    script = true
+require('copilot').setup({
+    suggestion = {
+        auto_trigger = true,
+        keymap = {
+            accept = "<S-Tab>"
+        }
+    }
 })
-vim.g.copilot_no_tab_map = true
+-- vim.api.nvim_set_keymap('i', '<S-Tab>', 'lua require("copilot.suggestion").accept()', {
+--     expr = true,
+--     silent = true,
+--     script = true
+-- })
+-- vim.g.copilot_no_tab_map = true
 
-
+--
 -- FZF
 vim.env.FZF_DEFAULT_COMMAND = 'rg --files -g "!.git/" -g "!.github/" -g "!node_modules/" --hidden'
 
@@ -45,8 +59,19 @@ require('lualine').setup { options = { icons_enabled = false } }
 vim.g.vim_matchtag_files = '*.astro,*.html,*.jsx,*.svelte,*.tsx,*.vue,*.xml'
 
 
+-- nvim-web-devicons
+require('nvim-web-devicons').setup()
+
+
 -- netrw
 vim.g.netrw_localrmdir='rm -rf'
+
+
+-- render-markdown
+require('render-markdown').setup({
+    enabled = true,
+    file_types = { 'markdown', 'Avante' }
+})
 
 
 -- vim-indent
@@ -83,6 +108,8 @@ local grep_ignore_globs = {
     "!**/.DS_Store",
     "--glob",
     "!**/python/*",
+    "--glob",
+    "!**/playwright-report/*",
 }
 
 telescope.load_extension("media_files")
@@ -115,8 +142,8 @@ telescope.setup {
     },
     extensions = {
         media_files = {
-            filetypes = {"png", "jpg", "jpeg", "webm", "pdf"},
-            find_cmd = "rg"
+            filetypes = {"jpg", "jpeg", "pdf", "png", "tif", "tiff", "webp"},
+            find_command = { "rg", "--files", "--hidden", "--no-ignore", "--sort", "path", unpack(grep_ignore_globs) },
         }
     },
     pickers = {
@@ -188,6 +215,7 @@ cmp.setup({
     }
 })
 
+
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local lsp_config = require'lspconfig'
@@ -251,6 +279,7 @@ require('nvim-treesitter.configs').setup {
         'javascript',
         'json',
         'jsonc',
+        'latex',
         'markdown',
         'prisma',
         'python',

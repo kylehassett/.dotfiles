@@ -21,7 +21,10 @@ Plug 'Pocco81/auto-save.nvim'
 Plug 'steelsojka/headwind.nvim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'nvim-lua/popup.nvim'
+Plug 'stevearc/dressing.nvim'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'MeanderingProgrammer/render-markdown.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -35,8 +38,13 @@ Plug 'mattn/emmet-vim'
 Plug 'dcampos/cmp-emmet-vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'windwp/nvim-ts-autotag'
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 Plug 'numToStr/Comment.nvim'
 Plug 'f-person/git-blame.nvim'
+Plug 'HakonHarnes/img-clip.nvim'
+Plug 'zbirenbaum/copilot.lua'
+Plug 'zbirenbaum/copilot-cmp'
+
+Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 
 call plug#end()
