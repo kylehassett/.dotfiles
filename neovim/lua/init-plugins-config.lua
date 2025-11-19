@@ -165,6 +165,7 @@ require("mason-lspconfig").setup({ ensure_installed = {
     'dockerls',
     'eslint',
     'emmet_ls',
+    'gopls',
     'html',
     'jsonls',
     'jdtls',
@@ -218,32 +219,31 @@ cmp.setup({
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-local lsp_config = require'lspconfig'
-lsp_config.astro.setup { capabilities = capabilities }
-lsp_config.angularls.setup { capabilities = capabilities }
-lsp_config.bashls.setup { capabilities = capabilities }
-lsp_config.clangd.setup { capabilities = capabilities }
-lsp_config.ccls.setup { capabilities = capabilities }
-lsp_config.cssls.setup { capabilities = capabilities }
-lsp_config.dockerls.setup { capabilities = capabilities }
-lsp_config.emmet_ls.setup({
-    capabilities = capabilities,
-    filetypes = { "astro", "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", 'svelte',  }
-})
-lsp_config.eslint.setup { capabilities = capabilities }
-lsp_config.html.setup { capabilities = capabilities }
-lsp_config.jdtls.setup { capabilities = capabilities }
-lsp_config.jsonls.setup { capabilities = capabilities }
-lsp_config.lua_ls.setup { capabilities = capabilities }
-lsp_config.marksman.setup { capabilities = capabilities }
-lsp_config.prismals.setup { capabilities = capabilities }
-lsp_config.pyright.setup { capabilities = capabilities }
-lsp_config.sqlls.setup { capabilities = capabilities }
-lsp_config.svelte.setup { capabilities = capabilities }
-lsp_config.tailwindcss.setup { capabilities = capabilities }
-lsp_config.ts_ls.setup { capabilities = capabilities }
-lsp_config.terraformls.setup { capabilities = capabilities }
-lsp_config.yamlls.setup { capabilities = capabilities }
+vim.lsp.config['astro'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['angularls'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['bashls'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['clangd'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['ccls'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['cssls'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['dockerls'] = { setup = { capabilities = capabilities } }
+-- vim.lsp.config['emmet_ls'] = { setup({
+--     capabilities = capabilities,
+--     filetypes = { "astro", "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", 'svelte',  }
+-- }) }
+vim.lsp.config['eslint'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['html'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['jdtls'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['jsonls'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['lua_ls'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['marksman'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['prismals'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['pyright'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['sqlls'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['svelte'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['tailwindcss'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['ts_ls'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['terraformls'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['yamlls'] = { setup = { capabilities = capabilities } }
 
 
 -- lspsaga
@@ -273,6 +273,7 @@ require('nvim-treesitter.configs').setup {
         'lua',
         'dockerfile',
         'gitignore',
+        'go',
         'hjson',
         'html',
         'java',

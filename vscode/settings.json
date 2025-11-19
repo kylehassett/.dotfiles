@@ -174,5 +174,64 @@
   "github.copilot.editor.enableAutoCompletions": true,
   "workbench.startupEditor": "none",
   "redhat.telemetry.enabled": false,
-  "debug.toolBarLocation": "commandCenter"
+  "debug.toolBarLocation": "commandCenter",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "docker.extension.enableComposeLanguageServer": false,
+  "githubPullRequests.pullBranch": "never",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "sql": false
+  },
+  "dbcode.connections": [
+    {
+      "connectionId": "-T1LraF_ZJwED2NmwrWiO",
+      "name": "raptor",
+      "driver": "cockroach",
+      "color": "#8EA23B",
+      "host": "raptor-850.j77.cockroachlabs.cloud",
+      "port": 26257,
+      "ssl": true,
+      "username": "kyle",
+      "password": "",
+      "savePassword": "secretStorage",
+      "database": "raptor",
+      "readOnly": false,
+      "connectionTimeout": 30,
+      "connectionType": "host"
+    },
+    {
+      "connectionId": "_Y7-hQ06dVFYSjbMDROFt",
+      "name": "PROD",
+      "driver": "cockroach",
+      "color": "#BD0014",
+      "host": "stegai-fossil-847.j77.cockroachlabs.cloud",
+      "port": 26257,
+      "ssl": true,
+      "username": "techadmin",
+      "password": "",
+      "savePassword": "secretStorage",
+      "database": "prod",
+      "readOnly": false,
+      "connectionTimeout": 30,
+      "connectionType": "host"
+    }
+  ],
+  "dbcode.resultLocation": "panel",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
 }
