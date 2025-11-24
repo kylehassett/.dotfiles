@@ -54,7 +54,7 @@ cask 'authy'
 cask 'bitwarden'
 cask 'cursor'
 cask 'dbeaver-community'
-# cask 'docker'  # Apparently this was removed
+cask 'docker'  # Apparently this was removed
 cask 'figma'
 cask 'flux'
 cask 'font-fira-code'
