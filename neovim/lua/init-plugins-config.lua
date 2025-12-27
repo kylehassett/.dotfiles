@@ -301,10 +301,21 @@ require('nvim-treesitter').setup {
         'typescript',
         'yaml',
     },
-    highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-    },
     indent = { enabled = true, }
 }
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = {
+    '.css',
+    '.html',
+    '.js',
+    '.jsx',
+    '.lua',
+    '.py',
+    '.svelte',
+    '.ts',
+    '.tsx',
+  },
+  callback = function() vim.treesitter.start() end,
+})
 
