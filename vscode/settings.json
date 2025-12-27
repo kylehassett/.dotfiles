@@ -233,5 +233,6 @@
   },
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  }
+  },
+  "cursor.composer.shouldChimeAfterChatFinishes": true
 }
