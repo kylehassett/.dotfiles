@@ -1,29 +1,27 @@
 -- Overriding defaults
 -- Vertical Scrolling
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-u>zz<CR>", { noremap = true, silent = true, })
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-d>zz<CR>", { noremap = true, silent = true, })
-vim.api.nvim_set_keymap("v", "<C-k>", "<C-u>zz<CR>", { noremap = true, silent = true, })
-vim.api.nvim_set_keymap("v", "<C-j>", "<C-d>zz<CR>", { noremap = true, silent = true, })
+vim.keymap.set({ "n", "v" }, "<C-k>", "<C-u>zz<CR>", { noremap = true, silent = true, })
+vim.keymap.set({ "n", "v" }, "<C-j>", "<C-d>zz<CR>", { noremap = true, silent = true, })
 
 --[[
     Keyboard shortcut system
     <leader><v>erb<n>oun EX: new tab -> <leader>nt
     Thinking in VIM, but for extensions, tabs, windows, etc.
     Use capital letters for verb if there are multiple semantically useful words for the short cuts.
+    This is roughly the idea. I don't always stick to it.
 --]]
 
 -- a
--- <a>i <c>hat
-vim.api.nvim_set_keymap('n', '<leader>aa', ':CodeCompanionChat<CR>', { noremap = true, silent = true, })
-vim.api.nvim_set_keymap('v', '<leader>aa', ':CodeCompanionChat<CR>', { noremap = true, silent = true, })
+-- <a>i <a>ccess
+vim.keymap.set({ 'n', 'v' }, '<leader>aa', ':CodeCompanionChat<CR>', { noremap = true, silent = true, })
 -- <a>i <i>nline
-vim.api.nvim_set_keymap('n', '<leader>ai', ':CodeCompanion<CR>', { noremap = true, silent = true, })
-vim.api.nvim_set_keymap('v', '<leader>ai', ':CodeCompanion<CR>', { noremap = true, silent = true, })
+vim.keymap.set({ 'n', 'v' }, '<leader>ai', ':CodeCompanion<CR>', { noremap = true, silent = true, })
+-- <a>i <p>allete
+vim.keymap.set({ 'n', 'v' }, '<leader>ap', ':CodeCompanionActions<CR>', { noremap = true, silent = true, })
 
 -- c
 -- <c>ode <a>ction
-vim.api.nvim_set_keymap('n', '<leader>ca', ':Lspsaga code_action<CR>', { noremap = true, silent = true, })
-vim.api.nvim_set_keymap("v", "<leader>ca", ":Lspsaga range_code_action<CR>", { noremap = true, silent = true, })
+vim.keymap.set({ 'n', "v" }, '<leader>ca', ':Lspsaga code_action<CR>', { noremap = true, silent = true, })
 -- <c>ode diagnostic
     -- <c>ursor
     vim.api.nvim_set_keymap('n', '<leader>cdc', ':Lspsaga show_cursor_diagnostics<CR>', { noremap = true, silent = true, })

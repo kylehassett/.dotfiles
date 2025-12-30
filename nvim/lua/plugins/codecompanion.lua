@@ -21,9 +21,22 @@ return {
                     end,
                 },
             },
+            display = {
+                chat = {
+                    separator = "---",
+                    window = {
+                        position = "right"
+                    }
+                }
+            },
             interactions = {
                 background = { adapter = "ollama", },
-                chat = { adapter = "ollama", },
+                chat = {
+                    adapter = "ollama",
+                    opts = {
+                        completion_provider = "cmp",
+                    }
+                },
                 cmd = { adapter = "ollama", },
                 inline = { adapter = "ollama", },
             },
