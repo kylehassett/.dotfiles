@@ -24,6 +24,7 @@ return {
                 'jsonc',
                 'latex',
                 'markdown',
+                'markdown_inline',
                 'prisma',
                 'python',
                 'rust',

@@ -92,3 +92,9 @@ require("lazy").setup({
 
 -- dracula colorscheme
 vim.cmd[[colorscheme dracula]]
+
+-- Code companion markdown rendering
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'codecompanion',
+    command = 'Markview attach',
+})

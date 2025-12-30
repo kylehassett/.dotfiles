@@ -12,6 +12,14 @@ vim.api.nvim_set_keymap("v", "<C-j>", "<C-d>zz<CR>", { noremap = true, silent = 
     Use capital letters for verb if there are multiple semantically useful words for the short cuts.
 --]]
 
+-- a
+-- <a>i <c>hat
+vim.api.nvim_set_keymap('n', '<leader>aa', ':CodeCompanionChat<CR>', { noremap = true, silent = true, })
+vim.api.nvim_set_keymap('v', '<leader>aa', ':CodeCompanionChat<CR>', { noremap = true, silent = true, })
+-- <a>i <i>nline
+vim.api.nvim_set_keymap('n', '<leader>ai', ':CodeCompanion<CR>', { noremap = true, silent = true, })
+vim.api.nvim_set_keymap('v', '<leader>ai', ':CodeCompanion<CR>', { noremap = true, silent = true, })
+
 -- c
 -- <c>ode <a>ction
 vim.api.nvim_set_keymap('n', '<leader>ca', ':Lspsaga code_action<CR>', { noremap = true, silent = true, })

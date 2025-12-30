@@ -6,7 +6,7 @@ return {
         end,
         dependencies = {
             'nvim-treesitter/nvim-treesitter',
-            'nvim-tree/nvim-web-devicons',
+            'kyazdani42/nvim-web-devicons',
         },
         opts = {
             code_action_keys = {

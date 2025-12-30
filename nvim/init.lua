@@ -25,7 +25,20 @@ cmp.setup({
             {
                 name = 'emmet_vim',
                 option = {
-                    filetypes = { 'astro', 'html', 'xml', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'heex', 'tsx', 'jsx' }
+                    filetypes = {
+                        'astro',
+                        'css',
+                        'html',
+                        'heex',
+                        'less',
+                        'jsx',
+                        'javascriptreact',
+                        'scss',
+                        'sass',
+                        'tsx',
+                        'typescriptreact',
+                        'xml'
+                    }
                 }
             },
         },
