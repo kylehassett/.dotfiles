@@ -1,5 +1,24 @@
--- General
-vim.cmd('colorscheme dracula')
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- As per lazy.nvim instructions...
+-- 1. Map the leader character here so the extensions are configured properly
+-- 2. Set other vim options
+vim.g.mapleader = " "
 
 vim.bo.autoindent = true
 vim.bo.autoread = true
@@ -11,10 +30,12 @@ vim.wo.cursorline = true
 vim.o.encoding = 'utf-8'
 vim.bo.expandtab = true
 vim.bo.fileencoding = 'utf-8'
+vim.env.FZF_DEFAULT_COMMAND = 'rg --files -g "!.git/" -g "!.github/" -g "!node_modules/" --hidden'
 vim.o.guifont = 'JetBrainsMono Nerd Font:13'
 vim.o.hidden = true
 vim.o.ignorecase = true
 vim.wo.list = true
+vim.opt.listchars:append "eol:↴"
 vim.o.backup = false
 vim.o.writebackup = false
 vim.wo.wrap = false
@@ -33,11 +54,9 @@ vim.o.smarttab = true
 vim.bo.tabstop = 4
 vim.o.termguicolors = true
 vim.o.updatetime = 300
+vim.g.vim_matchtag_files = '*.astro,*.html,*.jsx,*.svelte,*.tsx,*.vue,*.xml'
 vim.o.wildmenu = true
 vim.cmd('syntax enable')
-
--- Personalization
-vim.g.mapleader = " "
 
 -- I'm not messing with this for now. I need to learn how to navigate windows properly.
 vim.cmd([[
@@ -58,6 +77,18 @@ vim.cmd([[
     nnoremap <silent> <C-l> :call WinMove('l')<CR>
 ]])
 
--- Removing these for now in favor of page scrolling with <C-j> and <C-k>
--- nnoremap <silent> <C-j> :call WinMove('j')<CR>
--- nnoremap <silent> <C-k> :call WinMove('k')<CR>
+-- Setup lazy.nvim
+require("lazy").setup({
+  spec = {
+    -- import your plugins
+    { import = "plugins" },
+  },
+  -- Configure any other settings here. See the documentation for more details.
+  -- colorscheme that will be used when installing plugins.
+  install = { missing = true, colorscheme = { "dracula" } },
+  -- automatically check for plugin updates
+  checker = { enabled = true },
+})
+
+-- dracula colorscheme
+vim.cmd[[colorscheme dracula]]
