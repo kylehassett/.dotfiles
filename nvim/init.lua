@@ -18,72 +18,49 @@ cmp.setup({
             vim.fn['vsnip#anonymous'](args.body)
         end
     },
-    sources = cmp.config.sources(
+    sources = cmp.config.sources({
+        { name = 'nvim_lsp' },
+        { name = 'vsnip' },
         {
-            { name = 'nvim_lsp' },
-            { name = 'vsnip' },
-            {
-                name = 'emmet_vim',
-                option = {
-                    filetypes = {
-                        'astro',
-                        'css',
-                        'html',
-                        'heex',
-                        'less',
-                        'jsx',
-                        'javascriptreact',
-                        'scss',
-                        'sass',
-                        'tsx',
-                        'typescriptreact',
-                        'xml'
-                    }
+            name = 'emmet_vim',
+            option = {
+                filetypes = {
+                    'astro',
+                    'css',
+                    'html',
+                    'heex',
+                    'less',
+                    'jsx',
+                    'javascriptreact',
+                    'scss',
+                    'sass',
+                    'tsx',
+                    'typescriptreact',
+                    'xml'
                 }
-            },
+            }
         },
         {
-            { name = 'buffer' }
+            name = 'codecompanion',
+            option = {
+                filetypes = {
+                    'codecompanion'
+                }
+            }
         }
-    ),
+    }, {
+        { name = 'buffer' }
+    }),
     view = {
         entries = 'custom'
     }
 })
 
 -- cmp-nvim-lsp
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+require('cmp_nvim_lsp').default_capabilities()
 
-vim.lsp.config['astro'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['angularls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['bashls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['clangd'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['ccls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['cssls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['dockerls'] = { setup = { capabilities = capabilities } }
--- vim.lsp.config['emmet_ls'] = { setup({
---     capabilities = capabilities,
---     filetypes = { "astro", "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", 'svelte',  }
--- }) }
-vim.lsp.config['eslint'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['html'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['jdtls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['jsonls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['lua_ls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['marksman'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['prismals'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['pyright'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['sqlls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['svelte'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['tailwindcss'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['ts_ls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['terraformls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['yamlls'] = { setup = { capabilities = capabilities } }
-
-require'shortcuts' -- Set up custom shortcuts
+require'shortcuts' -- Set up my custom shortcuts
 
 -- netrw
 vim.g.netrw_localrmdir='rm -rf'
 
--- vim-indent
-vim.g.indent_guides_enable_on_vim_startup = 1

@@ -30,6 +30,7 @@ vim.wo.cursorline = true
 vim.o.encoding = 'utf-8'
 vim.bo.expandtab = true
 vim.bo.fileencoding = 'utf-8'
+vim.bo.filetype = "on"
 vim.env.FZF_DEFAULT_COMMAND = 'rg --files -g "!.git/" -g "!.github/" -g "!node_modules/" --hidden'
 vim.o.guifont = 'JetBrainsMono Nerd Font:13'
 vim.o.hidden = true
@@ -56,7 +57,10 @@ vim.o.termguicolors = true
 vim.o.updatetime = 300
 vim.g.vim_matchtag_files = '*.astro,*.html,*.jsx,*.svelte,*.tsx,*.vue,*.xml'
 vim.o.wildmenu = true
+
+-- Syntax highlighting and indentation plugins
 vim.cmd('syntax enable')
+vim.cmd('filetype plugin indent on')
 
 -- I'm not messing with this for now. I need to learn how to navigate windows properly.
 vim.cmd([[

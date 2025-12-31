@@ -43,7 +43,8 @@ load-nvmrc
 
 # Path changes
 export PATH=$PATH:/Users/kylehassett/go/bin:/Users/kylehassett/.cargo/bin
-
+export JAVA_HOME=$(brew --prefix openjdk)
+export PATH=$JAVA_HOME/bin:$PATH
 
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 

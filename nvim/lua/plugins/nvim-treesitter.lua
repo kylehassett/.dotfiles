@@ -41,6 +41,7 @@ return {
                 additional_vim_regex_highlighting = false,
             },
             indent = { enabled = true, },
-        }
+        },
+        priority = 9999
     }
 }
