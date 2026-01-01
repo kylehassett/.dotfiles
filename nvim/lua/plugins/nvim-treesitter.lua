@@ -1,6 +1,9 @@
 return {
     {
         'nvim-treesitter/nvim-treesitter',
+        config = function(_, opts)
+            require('nvim-treesitter').setup(opts)
+        end,
         build = ':TSUpdate',
         lazy = false,
         opts = {
@@ -9,10 +12,12 @@ return {
                 enable = true,
             },
             ensure_installed = {
+                'angular',
+                'astro',
                 'bash',
                 'c',
+                'cmake',
                 'css',
-                'lua',
                 'dockerfile',
                 'gitignore',
                 'go',
@@ -22,9 +27,14 @@ return {
                 'javascript',
                 'json',
                 'jsonc',
+                'jsx',
+                'kotlin',
                 'latex',
+                'lua',
                 'markdown',
                 'markdown_inline',
+                'nginx',
+                'objc',
                 'prisma',
                 'python',
                 'rust',
@@ -32,9 +42,14 @@ return {
                 'sql',
                 'svelte',
                 'swift',
+                'terraform',
                 'tsx',
                 'typescript',
+                'vim',
+                'vimdoc',
+                'xml',
                 'yaml',
+                'zsh',
             },
             highlight = {
                 enable = true,
