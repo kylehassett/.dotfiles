@@ -26,6 +26,7 @@ brew 'luarocks'
 brew 'neovim', args: ["HEAD"]
 brew 'node'
 brew 'openjdk'
+brew 'opentofu'
 brew 'perl'
 brew 'php'
 brew 'pngpaste'
