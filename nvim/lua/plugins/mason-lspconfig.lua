@@ -10,7 +10,6 @@ return {
                 'clangd',
                 'cmake',
                 'codebook',
-                'copilot',
                 'cssls',
                 'docker_language_server',
                 'emmet_language_server',
