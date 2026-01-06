@@ -3,6 +3,9 @@ require'config.lazy' -- Set up lazy.nvim, vim options, and point lazy.nvim to pl
 -- Telescope
 require'telescope'.load_extension("media_files")
 
+-- Treesitter
+vim.treesitter.language.register('python', { 'py' })
+
 -- nvim-cmp
 vim.cmd('set completeopt=menu,menuone,noselect')
 
