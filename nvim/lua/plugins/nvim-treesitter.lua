@@ -90,7 +90,6 @@ return {
                 'java',
                 'javascript',
                 'json',
-                'jsonc',
                 'jsx',
                 'kotlin',
                 'latex',

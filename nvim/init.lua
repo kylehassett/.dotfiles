@@ -92,7 +92,7 @@ vim.lsp.config['nginx_language_server'] = { setup = { capabilities = capabilitie
 vim.lsp.config['prettier'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['postgres_lsp'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['prismals'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['pyright'] = { setup = { capabilities = capabilities } }
+vim.lsp.config['ruff'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['pylsp'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['sqlls'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['svelte'] = { setup = { capabilities = capabilities } }

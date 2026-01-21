@@ -49,6 +49,7 @@ vim.o.sidescrolloff = 30
 vim.bo.shiftwidth = 4
 vim.o.showmatch = true
 vim.o.showtabline = 2
+vim.opt.signcolumn = "yes"
 vim.bo.softtabstop = 4
 vim.bo.smartindent = true
 vim.o.smarttab = true

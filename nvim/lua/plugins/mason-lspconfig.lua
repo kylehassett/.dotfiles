@@ -27,7 +27,7 @@ return {
                 'nginx_language_server',
                 'postgres_lsp',
                 'prismals',
-                'pyright',
+                'ruff',
                 'pylsp',
                 'sqlls',
                 'svelte',
