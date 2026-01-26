@@ -70,7 +70,6 @@ vim.lsp.config['bashls'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['clangd'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['cmake'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['codebook'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['copilot'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['cssls'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['docker_language_server'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['emmet_language_server'] = { setup = {
