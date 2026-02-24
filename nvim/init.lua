@@ -22,26 +22,6 @@ cmp.setup({
         end
     },
     sources = cmp.config.sources({
-        { name = 'buffer' },
-        {
-            name = 'emmet_vim',
-            option = {
-                filetypes = {
-                    'astro',
-                    'css',
-                    'html',
-                    'heex',
-                    'less',
-                    'jsx',
-                    'javascriptreact',
-                    'scss',
-                    'sass',
-                    'tsx',
-                    'typescriptreact',
-                    'xml'
-                }
-            }
-        },
         { name = 'nvim_lsp' },
         { name = 'nvim_lsp_signature_help' },
         { name = 'path' },
@@ -54,6 +34,7 @@ cmp.setup({
                 }
             }
         },
+        { name = 'buffer' },
     }),
     view = {
         entries = 'custom'
@@ -72,10 +53,6 @@ vim.lsp.config['cmake'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['codebook'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['cssls'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['docker_language_server'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['emmet_language_server'] = { setup = {
-    capabilities = capabilities,
-    filetypes = { "astro", "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", 'svelte',  }
-} }
 vim.lsp.config['eslint'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['gh_actions_ls'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['gopls'] = { setup = { capabilities = capabilities } }
@@ -92,7 +69,6 @@ vim.lsp.config['prettier'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['postgres_lsp'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['prismals'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['ruff'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['pylsp'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['sqlls'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['svelte'] = { setup = { capabilities = capabilities } }
 vim.lsp.config['tailwindcss'] = { setup = { capabilities = capabilities } }
