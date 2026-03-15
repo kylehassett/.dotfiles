@@ -83,3 +83,10 @@ require'shortcuts' -- Set up my custom shortcuts
 -- netrw
 vim.g.netrw_localrmdir='rm -rf'
 
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "json",
+    callback = function()
+        vim.wo.conceallevel = 0
+    end,
+})
+
