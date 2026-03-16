@@ -2,7 +2,7 @@
 alias cl="clear && printf '\e[3J'"
 alias ff="rg --files --hidden -g "!.git/" -g "!.github/" | fzf-tmux -p --reverse | xargs nvim"
 alias ll="ls -Fla"
-alias claude-local="export ANTHROPIC_BASE_URL=http://localhost:1234 && export ANTHROPIC_AUTH_TOKEN=lmstudio && claude && unset ANTHROPIC_BASE_URL && unset ANTHROPIC_AUTH_TOKEN"
+alias claude-local="export ANTHROPIC_BASE_URL=http://192.168.120.62:1234 && export ANTHROPIC_AUTH_TOKEN=lmstudio && claude && unset ANTHROPIC_BASE_URL && unset ANTHROPIC_AUTH_TOKEN"
 alias ls="/bin/ls -G"
 alias nvid="neovide $argv --no-fork"
 alias resource="source ~/.zshrc"
