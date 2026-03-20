@@ -8,6 +8,8 @@ local grep_ignore_globs = {
     "--glob",
     "!**/dist/*",
     "--glob",
+    "!**/htmlcov/*",
+    "--glob",
     "!**/node_modules/*",
     "--glob",
     "!**/venv/*",
