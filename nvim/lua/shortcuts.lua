@@ -3,17 +3,11 @@
 vim.keymap.set({ "n", "v" }, "<C-k>", "<C-u>zz<CR>", { noremap = true, silent = true, })
 vim.keymap.set({ "n", "v" }, "<C-j>", "<C-d>zz<CR>", { noremap = true, silent = true, })
 
---[[
-    Keyboard shortcut system
-    <leader><v>erb<n>oun EX: new tab -> <leader>nt
-    Thinking in VIM, but for extensions, tabs, windows, etc.
-    Use capital letters for verb if there are multiple semantically useful words for the short cuts.
-    This is roughly the idea. I don't always stick to it.
---]]
-
 -- a
--- <a>i <a>ccess
-vim.keymap.set({ 'n', 'v' }, '<leader>aa', ':CodeCompanionChat<CR>', { noremap = true, silent = true, })
+-- <a>i <a>ctions
+vim.keymap.set({ 'n', 'v' }, '<leader>ac', ':CodeCompanionActions<CR>', { noremap = true, silent = true, })
+-- <a>i <c>hat
+vim.keymap.set({ 'n', 'v' }, '<leader>ac', ':CodeCompanionChat<CR>', { noremap = true, silent = true, })
 -- <a>i <i>nline
 vim.keymap.set({ 'n', 'v' }, '<leader>ai', ':CodeCompanion<CR>', { noremap = true, silent = true, })
 -- <a>i <p>allete

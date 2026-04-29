@@ -1,7 +1,6 @@
 return {
     {
         'nvim-treesitter/nvim-treesitter',
-        branch = "main",
         build = ':TSUpdate',
         config = function(_, opts)
           -- install parsers from custom opts.ensure_installed
@@ -69,7 +68,6 @@ return {
           })
         end,
         lazy = false,
-        event = "BufRead",
         opts = {
             auto_install = true,
             autotag = {
