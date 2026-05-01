@@ -1,4 +1,4 @@
--- Overriding defaults
+--- Overriding defaults
 -- Vertical Scrolling
 vim.keymap.set({ "n", "v" }, "<C-k>", "<C-u>zz<CR>", { noremap = true, silent = true, })
 vim.keymap.set({ "n", "v" }, "<C-j>", "<C-d>zz<CR>", { noremap = true, silent = true, })
@@ -55,16 +55,8 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 -- <f>ind <m>edia
 vim.keymap.set('n', '<leader>fm', ":Telescope media_files<CR>", {})
--- <f>lao<t>erm
-    -- open
-    vim.keymap.set('n', '<leader>ft', ':Lspsaga open_floaterm<CR>', { noremap = true, silent = true, })
-
-    -- function ClearFloaterm()
-    --     vim.api.nvim_command('<>')
-    -- end
-
-    -- close
-    vim.keymap.set('t', '<D-d>', "<C-\\><C-n>:Lspsaga close_floaterm<CR>", { noremap = true, silent = true, })
+--- <f>loating <t>erminal
+vim.keymap.set('n', '<leader>ft', ":Lspsaga term_toggle<CR>", { noremap = true, silent = true, })
 -- g
 vim.keymap.set('n', '<leader>gb', ':GitBlameToggle<CR>', { noremap = true, silent = true, })
 -- h
@@ -74,7 +66,7 @@ vim.keymap.set('n', '<leader>ht', ':tabprevious<CR>', { noremap = true, silent =
 vim.keymap.set('n', '<leader>hh', ':noh<CR>', { noremap = true, silent = true, })
 -- l
 -- <l>azy<g>it
-vim.keymap.set('n', '<leader>lg', ":lua require('lspsaga.floaterm').open_float_terminal()<CR>", { noremap = true, silent = true, })
+vim.keymap.set('n', '<leader>lg', ":lua require('lspsaga.term_toggle').open_float_terminal()<CR>", { noremap = true, silent = true, })
 -- right movement for tabs
 vim.keymap.set('n', '<leader>lt', ':tabnext<CR>', { noremap = true, silent = true, })
 -- o
