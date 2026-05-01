@@ -6,48 +6,6 @@ require'telescope'.load_extension("media_files")
 -- Treesitter
 vim.treesitter.language.register('python', { 'py' })
 
--- blink.cmp
--- local capabilities = require('blink.cmp').get_lsp_capabilities()
---
--- local servers = {
---     'angularls',
---     'ansiblels',
---     'astro',
---     'bashls',
---     'clangd',
---     'cmake',
---     'codebook',
---     'cssls',
---     'docker_language_server',
---     'eslint',
---     'gh_actions_ls',
---     'gopls',
---     'harper_ls',
---     'html',
---     'htmx',
---     'jdtls',
---     'jsonls',
---     'kotlin_language_server',
---     'lua_ls',
---     'marksman',
---     'nginx_language_server',
---     -- 'prettier',
---     'postgres_lsp',
---     'prismals',
---     'ruff',
---     'sqlls',
---     'svelte',
---     'tailwindcss',
---     'terraformls',
---     'ts_ls',
---     'yamlls'
--- }
---
--- for _, server in ipairs(servers) do
---   vim.lsp.config[server] = { capabilities = capabilities }
---   vim.lsp.enable(server)
--- end
-
 require'shortcuts' -- Set up my custom shortcuts
 
 -- netrw
