@@ -34,7 +34,7 @@ return {
                 chat = {
                     adapter = "ollama",
                     opts = {
-                        completion_provider = "cmp",
+                        -- completion_provider = "cmp",
                     }
                 },
                 cmd = { adapter = "ollama", },

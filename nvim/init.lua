@@ -6,79 +6,49 @@ require'telescope'.load_extension("media_files")
 -- Treesitter
 vim.treesitter.language.register('python', { 'py' })
 
--- nvim-cmp
-vim.cmd('set completeopt=menu,menuone,noselect')
-
-local cmp = require'cmp'
-
-cmp.setup({
-    mapping = cmp.mapping.preset.insert({
-        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
-        ['<Enter>'] = cmp.mapping.confirm({ select = true })
-    }),
-    snippet = {
-        expand = function(args)
-            vim.fn['vsnip#anonymous'](args.body)
-        end
-    },
-    sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
-        { name = 'nvim_lsp_signature_help' },
-        { name = 'path' },
-        { name = 'vsnip' },
-        {
-            name = 'codecompanion',
-            option = {
-                filetypes = {
-                    'codecompanion'
-                }
-            }
-        },
-        { name = 'buffer' },
-    }),
-    view = {
-        entries = 'custom'
-    }
-})
-
--- cmp-nvim-lsp
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-vim.lsp.config['angularls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['ansiblels'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['astro'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['bashls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['clangd'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['cmake'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['codebook'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['cssls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['docker_language_server'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['eslint'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['gh_actions_ls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['gopls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['harper_ls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['html'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['htmx'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['jdtls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['jsonls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['kotlin_language_server'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['lua_ls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['marksman'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['nginx_language_server'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['prettier'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['postgres_lsp'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['prismals'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['ruff'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['sqlls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['svelte'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['tailwindcss'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['terraformls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['ts_ls'] = { setup = { capabilities = capabilities } }
-vim.lsp.config['yamlls'] = { setup = { capabilities = capabilities } }
-
+-- blink.cmp
+-- local capabilities = require('blink.cmp').get_lsp_capabilities()
+--
+-- local servers = {
+--     'angularls',
+--     'ansiblels',
+--     'astro',
+--     'bashls',
+--     'clangd',
+--     'cmake',
+--     'codebook',
+--     'cssls',
+--     'docker_language_server',
+--     'eslint',
+--     'gh_actions_ls',
+--     'gopls',
+--     'harper_ls',
+--     'html',
+--     'htmx',
+--     'jdtls',
+--     'jsonls',
+--     'kotlin_language_server',
+--     'lua_ls',
+--     'marksman',
+--     'nginx_language_server',
+--     -- 'prettier',
+--     'postgres_lsp',
+--     'prismals',
+--     'ruff',
+--     'sqlls',
+--     'svelte',
+--     'tailwindcss',
+--     'terraformls',
+--     'ts_ls',
+--     'yamlls'
+-- }
+--
+-- for _, server in ipairs(servers) do
+--   vim.lsp.config[server] = { capabilities = capabilities }
+--   vim.lsp.enable(server)
+-- end
 
 require'shortcuts' -- Set up my custom shortcuts
-
 
 -- netrw
 vim.g.netrw_localrmdir='rm -rf'
