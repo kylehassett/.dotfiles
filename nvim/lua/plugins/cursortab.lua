@@ -7,7 +7,7 @@ return {
             require('cursortab').setup({
                 provider = {
                     type = "sweep",
-                    url = "http://192.168.1.9:1234"
+                    url = "http://localhost:1234"
                 }
             })
         end
