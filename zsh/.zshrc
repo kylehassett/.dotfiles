@@ -50,5 +50,10 @@ export PATH=$JAVA_HOME/bin:$PATH
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 
+# Source ~/.secrets file that holds api keys
+if [ -f ~/.secrets ]; then
+  source ~/.secrets
+fi
+
 # Hook into direnv KEEP AT THE END OF THE FILE
 eval "$(direnv hook zsh)"
