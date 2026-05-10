@@ -37,6 +37,9 @@ return {
                 'snippets',
                 'buffer'
             },
+            per_filetype = {
+                codecompanion = { 'codecompanion' },
+            },
         },
         completion = {
             ghost_text = { enabled = false },

@@ -6,8 +6,15 @@ return {
         config = function()
             require('cursortab').setup({
                 provider = {
+                    completion_timeout = 60000,
+                    model = "sweep-next-edit-1.5b",
                     type = "sweep",
-                    url = "http://localhost:1234"
+                    url = "http://localhost:1234",
+                },
+                ui = {
+                    completions = {
+                        addition_style = "highlight"
+                    },
                 }
             })
         end

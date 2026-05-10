@@ -12,11 +12,16 @@ return {
             },
             adapters = {
                 http = {
-                    ollama = function()
+                    lmstudio = function()
                         return require("codecompanion.adapters").extend("openai_compatible", {
                             env = {
-                                url = "http://192.168.120.62:1234",
+                                url = "http://192.168.1.9:1234",
                             },
+                            schema = {
+                                model = {
+                                    default = "qwen/qwen3-coder-30b"
+                                }
+                            }
                         })
                     end,
                 },
@@ -30,15 +35,15 @@ return {
                 }
             },
             interactions = {
-                background = { adapter = "ollama", },
+                background = { adapter = "lmstudio", },
                 chat = {
-                    adapter = "ollama",
+                    adapter = "lmstudio",
                     opts = {
                         completion_provider = "blink",
                     }
                 },
-                cmd = { adapter = "ollama", },
-                inline = { adapter = "ollama", },
+                cmd = { adapter = "lmstudio", },
+                inline = { adapter = "lmstudio", },
             },
         },
         version = "^18.0.0",
