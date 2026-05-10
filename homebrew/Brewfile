@@ -57,6 +57,7 @@ cask 'cursor'
 cask 'dbeaver-community'
 cask 'docker-desktop'  # Apparently this was removed
 cask 'figma'
+cask 'firefox'
 cask 'flux-app'
 cask 'font-fira-code'
 cask 'font-jetbrains-mono-nerd-font'
